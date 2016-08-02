@@ -10,17 +10,19 @@ import UIKit
 
 class MenuTableViewController: UIViewController {
 
-    var tableView: UITableView {
-        get {
-            return view as! UITableView
-        }
-    }
+    @IBOutlet private weak var tableView: UITableView!
+    
+//    var tableView: UITableView {
+//        get {
+//            return view as! UITableView
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImage(named: "viewBgr")
-        let imageView = UIImageView(image: backgroundImage)
-        tableView.backgroundView = imageView
+        
+//        let imageView = UIImageView(image: UIImage(named: "viewBgr"))
+//        tableView.backgroundView = imageView
     }
 }
 
@@ -31,24 +33,17 @@ extension MenuTableViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constant.menuItem, forIndexPath: indexPath) as! MenuTableViewCell
-        if let menuItem = Menu(rawValue: indexPath.row) {
-            cell.item = menuItem
-        }
-                
+        let cell = tableView.dequeueReusableCellWithIdentifier(MenuCell.cellIdentifier, forIndexPath: indexPath) as! MenuCell
+        cell.item = Menu(rawValue: indexPath.row)
         return cell
     }
 }
 
 extension MenuTableViewController : UITableViewDelegate {
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let item = Menu(rawValue: indexPath.row) {
-            switch item {
-            case .storeSetup:
-                self.performSegueWithIdentifier(Constant.storeSetup, sender: self)
-            default:
-                break
-            }
+        if Menu.menuSegue(item: Menu(rawValue: indexPath.row)!) != nil {
+            self.performSegueWithIdentifier(Menu.menuSegue(item: Menu(rawValue: indexPath.row)!)!, sender: self)
         }
     }
 }

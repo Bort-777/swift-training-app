@@ -13,10 +13,10 @@
 		EA6C3C511D4F530B00017721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4F1D4F530B00017721 /* LaunchScreen.storyboard */; };
 		EA6C3C651D4F665300017721 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C641D4F665300017721 /* MenuTableViewController.swift */; };
 		EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C6A1D4F69DD00017721 /* Menu.swift */; };
-		EA6C3C6F1D4F71FB00017721 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C6E1D4F71FB00017721 /* MenuTableViewCell.swift */; };
+		EA6C3C6F1D4F71FB00017721 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */; };
 		EA6C3C791D4F72BA00017721 /* StoreSetupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C781D4F72BA00017721 /* StoreSetupTableViewController.swift */; };
 		EA6C3C7B1D4F795E00017721 /* StoreSetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */; };
-		EA6C3C7F1D4FAB1000017721 /* StoreSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7E1D4FAB1000017721 /* StoreSetupTableViewCell.swift */; };
+		EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */; };
 		EA6C3C871D4FB4D600017721 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C861D4FB4D600017721 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,10 +29,10 @@
 		EA6C3C521D4F530B00017721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA6C3C641D4F665300017721 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		EA6C3C6A1D4F69DD00017721 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		EA6C3C6E1D4F71FB00017721 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		EA6C3C781D4F72BA00017721 /* StoreSetupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupTableViewController.swift; sourceTree = "<group>"; };
 		EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupData.swift; sourceTree = "<group>"; };
-		EA6C3C7E1D4FAB1000017721 /* StoreSetupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupTableViewCell.swift; sourceTree = "<group>"; };
+		EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupCell.swift; sourceTree = "<group>"; };
 		EA6C3C861D4FB4D600017721 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8683BDD61D50D8EB00C0C20F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */,
+				EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		EA6C3C3A1D4F530B00017721 = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +87,7 @@
 		EA6C3C621D4F65FE00017721 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EA6C3C7E1D4FAB1000017721 /* StoreSetupTableViewCell.swift */,
-				EA6C3C6E1D4F71FB00017721 /* MenuTableViewCell.swift */,
+				8683BDD61D50D8EB00C0C20F /* Cell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -186,9 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6C3C791D4F72BA00017721 /* StoreSetupTableViewController.swift in Sources */,
-				EA6C3C6F1D4F71FB00017721 /* MenuTableViewCell.swift in Sources */,
+				EA6C3C6F1D4F71FB00017721 /* MenuCell.swift in Sources */,
 				EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */,
-				EA6C3C7F1D4FAB1000017721 /* StoreSetupTableViewCell.swift in Sources */,
+				EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */,
 				EA6C3C651D4F665300017721 /* MenuTableViewController.swift in Sources */,
 				EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */,
 				EA6C3C7B1D4F795E00017721 /* StoreSetupData.swift in Sources */,

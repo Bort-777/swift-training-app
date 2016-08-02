@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoreSetupTableViewCell: UITableViewCell {
+class StoreSetupCell: UITableViewCell {
     
     @IBOutlet private weak var iconView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!

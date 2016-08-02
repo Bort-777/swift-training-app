@@ -9,6 +9,7 @@
 import Foundation
 
 enum Constant {
-    static let storeSetup = "Store Setup"
+    static let sStoreSetup = "storeSetup"
+    
     static let menuItem = "menuItem"
 }

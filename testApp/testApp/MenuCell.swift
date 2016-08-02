@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MenuTableViewCell: UITableViewCell {
+class MenuCell: UITableViewCell {
+    
+    static let cellIdentifier = String(MenuCell)
     
     @IBOutlet private weak var iconView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -20,8 +22,8 @@ class MenuTableViewCell: UITableViewCell {
 
     var item: Menu? {
         didSet {
-            nameLabel.text = Menu.getMenuTitle(item: item!)
-            iconView.image = UIImage(named: Menu.getMenuImage(item: item!))
+            nameLabel.text = Menu.menuTitle(item: item!)
+            iconView.image = UIImage(named: Menu.menuImage(item: item!))
         }
     }
 }
