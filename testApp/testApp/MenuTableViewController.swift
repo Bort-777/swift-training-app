@@ -25,7 +25,7 @@ extension MenuTableViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(Constant.menuItem, forIndexPath: indexPath) as! MenuTableViewCell
         
         if let menuItem = Menu(rawValue: indexPath.row) {
-            cell.editData(menuItem: menuItem)
+            cell.item = menuItem
         }
         
         return cell

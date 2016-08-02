@@ -18,9 +18,10 @@ class MenuTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func editData(menuItem item: Menu) {
-        nameLabel.text = Menu.getMenuTitle(item: item)
-        iconView.image = UIImage(named: Menu.getMenuImage(item: item))
+    var item: Menu? {
+        didSet {
+            nameLabel.text = Menu.getMenuTitle(item: item!)
+            iconView.image = UIImage(named: Menu.getMenuImage(item: item!))
+        }
     }
-    
 }
