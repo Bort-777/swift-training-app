@@ -78,6 +78,14 @@ enum StoreSetup : Int{
         switch item {
         case .department:
             return "dept"
+        case .vendors:
+            return "vendors"
+        case .taxes:
+            return "taxes"
+        case .costTracking:
+            return "cost"
+        case .lookDescriptions:
+            return "lookup"
         default:
             return nil
         }
