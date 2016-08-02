@@ -25,6 +25,9 @@ class StoreSetupTableViewCell: UITableViewCell {
             if let imageName = StoreSetup.getItemImage(item: item!) {
                 iconView.image = UIImage(named: imageName)
             }
+            else {
+                iconView.removeFromSuperview()
+            }
         }
     }
     
@@ -45,5 +48,6 @@ class StoreSetupTableViewCell: UITableViewCell {
         super.awakeFromNib()
         arrowView.hidden = true
         swichView.hidden = true
+        backgroundColor = .clearColor()
     }
 }

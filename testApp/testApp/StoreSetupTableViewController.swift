@@ -10,9 +10,26 @@ import UIKit
 
 class StoreSetupTableViewController: UIViewController {
     
+    var tableView: UITableView {
+        get {
+            return view as! UITableView
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingTableView()
+    }
+    
+    func settingTableView() {
+        let backgroundImage = UIImage(named: "viewBgr")
+        let imageView = UIImageView(image: backgroundImage)
+        tableView.backgroundView = imageView
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+    }
+    
+    func segueBar() {
+        
     }
 }
 
@@ -27,6 +44,21 @@ extension StoreSetupTableViewController : UITableViewDataSource {
         if let menuItem = StoreSetup(rawValue: indexPath.row) {
             cell.item = menuItem
         }
+        
+        let backgroundImage: UIImage?
+        
+        switch indexPath.row {
+        case 0:
+            backgroundImage = UIImage(named: "cellTop")
+        case tableView.numberOfRowsInSection(indexPath.section) - 1:
+            backgroundImage = UIImage(named: "cellBottom")
+        default:
+            backgroundImage = UIImage(named: "cellMiddleBottom")
+        }
+        
+        let imageView = UIImageView(image: backgroundImage)
+        cell.backgroundView = imageView
+
         
         return cell
     }

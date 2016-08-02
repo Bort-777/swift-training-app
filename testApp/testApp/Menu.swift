@@ -31,11 +31,11 @@ enum Menu: Int {
     static func getMenuImage(item item: Menu) -> String {
         switch item {
         case .inventoryList:
-            return "Inventory List"
+            return "inventoryLogo"
         case .stockLevels:
-            return "Adjust Stock Levels"
+            return "adjustLogo"
         case .storeSetup:
-            return "Store Setup"
+            return "storeLogo"
         }
     }
 }

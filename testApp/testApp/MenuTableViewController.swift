@@ -10,8 +10,17 @@ import UIKit
 
 class MenuTableViewController: UIViewController {
 
+    var tableView: UITableView {
+        get {
+            return view as! UITableView
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backgroundImage = UIImage(named: "viewBgr")
+        let imageView = UIImageView(image: backgroundImage)
+        tableView.backgroundView = imageView
     }
 }
 
@@ -23,11 +32,10 @@ extension MenuTableViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(Constant.menuItem, forIndexPath: indexPath) as! MenuTableViewCell
-        
         if let menuItem = Menu(rawValue: indexPath.row) {
             cell.item = menuItem
         }
-        
+                
         return cell
     }
 }

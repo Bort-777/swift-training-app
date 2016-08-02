@@ -15,7 +15,7 @@ class MenuTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = .clearColor()
     }
 
     var item: Menu? {
