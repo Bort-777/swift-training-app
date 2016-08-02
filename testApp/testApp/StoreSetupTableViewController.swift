@@ -18,19 +18,7 @@ class StoreSetupTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingTableView()
     }
-    
-    func settingTableView() {
-//        let backgroundImage = UIImage(named: "viewBgr")
-//        let imageView = UIImageView(image: backgroundImage)
-//        tableView.backgroundView = imageView
-//        tableView.tableFooterView = UIView(frame: CGRectZero)
-    }
-    
-//    func segueBar() {
-//        
-//    }
 }
 extension StoreSetupTableViewController : UITableViewDelegate {
 
@@ -48,9 +36,7 @@ extension StoreSetupTableViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("storeCell", forIndexPath: indexPath) as! StoreSetupCell
        
-        if let menuItem = StoreSetup(rawValue: indexPath.row) {
-            cell.item = menuItem
-        }
+        cell.item = StoreSetupItem(index: indexPath.row)
         
 //        let backgroundImage: UIImage?
 //        

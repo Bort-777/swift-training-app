@@ -28,8 +28,16 @@ enum StoreSetup : Int{
         while let _ = StoreSetup(rawValue: max) { max += 1 }
         return max
     }()
+}
+
+class StoreSetupItem {
+    var item: StoreSetup
     
-    static func getItemType(item item: StoreSetup) -> SetupCellType {
+    init(index: Int) {
+        item = StoreSetup(rawValue: index)!
+    }
+    
+    var getItemType: SetupCellType {
         switch item {
         case .vendors, .department, .taxes:
             return .arrowType
@@ -40,7 +48,7 @@ enum StoreSetup : Int{
         }
     }
     
-    static func getItemName(item item: StoreSetup) -> String {
+    var getItemName: String {
         switch item {
         case .vendors:
             return "Vendors"
@@ -59,7 +67,7 @@ enum StoreSetup : Int{
         }
     }
     
-    static func getItemSubtitle(item item: StoreSetup) -> String? {
+    var getItemSubtitle: String? {
         switch item {
         case .vendors:
             return "Vendors"
@@ -74,7 +82,7 @@ enum StoreSetup : Int{
         }
     }
     
-    static func getItemImage(item item: StoreSetup) -> String? {
+    var getItemImage: String? {
         switch item {
         case .department:
             return "dept"

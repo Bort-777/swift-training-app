@@ -12,17 +12,8 @@ class MenuTableViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
-//    var tableView: UITableView {
-//        get {
-//            return view as! UITableView
-//        }
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let imageView = UIImageView(image: UIImage(named: "viewBgr"))
-//        tableView.backgroundView = imageView
     }
 }
 
@@ -34,7 +25,8 @@ extension MenuTableViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(MenuCell.cellIdentifier, forIndexPath: indexPath) as! MenuCell
-        cell.item = Menu(rawValue: indexPath.row)
+        
+        cell.item = MenuItem(index: indexPath.row)
         return cell
     }
 }

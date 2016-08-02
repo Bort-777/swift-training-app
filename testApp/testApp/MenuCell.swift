@@ -20,10 +20,10 @@ class MenuCell: UITableViewCell {
         backgroundColor = .clearColor()
     }
 
-    var item: Menu? {
+    var item: MenuItem? {
         didSet {
-            nameLabel.text = Menu.menuTitle(item: item!)
-            iconView.image = UIImage(named: Menu.menuImage(item: item!))
+            nameLabel.text = item!.menuTitle
+            iconView.image = UIImage(named: item!.menuImage)
         }
     }
 }
