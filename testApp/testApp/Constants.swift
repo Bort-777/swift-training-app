@@ -8,6 +8,7 @@
 
 import Foundation
 
-let STORE_SETUP = "Store Setup"
-
-let MENU_ITEM = "menuItem"
+enum Constant {
+    static let storeSetup = "Store Setup"
+    static let menuItem = "menuItem"
+}

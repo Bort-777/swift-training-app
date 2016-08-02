@@ -8,17 +8,36 @@
 
 import Foundation
 
-class Menu {
-    private let items = ["Inventory List", "Adjust Stock Levels", "Store Setup"]
+enum Menu: Int {
+    case inventoryList, stockLevels, storeSetup
     
-    var count : Int {
-        get {
-            return items.count
+    static let count: Int = {
+        var max: Int = 0
+        while let _ = Menu(rawValue: max) { max += 1 }
+        return max
+    }()
     
+    static func getMenuTitle(item item: Menu) -> String {
+        switch item {
+        case .inventoryList:
+            return "Inventory List"
+        case .stockLevels:
+            return "Stock Levels"
+        case .storeSetup:
+            return "Store Setup"
         }
     }
     
-    func menuItem(index index: Int) -> String {
-        return items[index]
+    static func getMenuImage(item item: Menu) -> String {
+        switch item {
+        case .inventoryList:
+            return "Inventory List"
+        case .stockLevels:
+            return "Adjust Stock Levels"
+        case .storeSetup:
+            return "Store Setup"
+        }
     }
 }
+
+

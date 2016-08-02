@@ -9,8 +9,6 @@
 import UIKit
 
 class MenuTableViewController: UIViewController {
-    
-    private var menu = Menu()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +16,17 @@ class MenuTableViewController: UIViewController {
 }
 
 extension MenuTableViewController : UITableViewDataSource {
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menu.count
+        return Menu.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(MENU_ITEM, forIndexPath: indexPath) as! MenuTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constant.menuItem, forIndexPath: indexPath) as! MenuTableViewCell
         
-        cell.editData(title: menu.menuItem(index: indexPath.row))
+        if let menuItem = Menu(rawValue: indexPath.row) {
+            cell.editData(menuItem: menuItem)
+        }
         
         return cell
     }
@@ -33,13 +34,13 @@ extension MenuTableViewController : UITableViewDataSource {
 
 extension MenuTableViewController : UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let row = indexPath.row
-        
-        switch row {
-        case 2:
-            self.performSegueWithIdentifier(STORE_SETUP, sender: self)
-        default:
-            break
+        if let item = Menu(rawValue: indexPath.row) {
+            switch item {
+            case .storeSetup:
+                self.performSegueWithIdentifier(Constant.storeSetup, sender: self)
+            default:
+                break
+            }
         }
     }
 }

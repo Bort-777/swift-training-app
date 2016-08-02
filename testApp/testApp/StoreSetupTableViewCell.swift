@@ -17,6 +17,17 @@ class StoreSetupTableViewCell: UITableViewCell {
     @IBOutlet private weak var swichView: UISwitch!
     @IBOutlet private weak var arrowView: UIImageView!
     
+    var item: StoreSetup? {
+        didSet {
+            mode = StoreSetup.getItemType(item: item!)
+            titleLabel.text = StoreSetup.getItemName(item: item!)
+            subtitleLabel.text = StoreSetup.getItemSubtitle(item: item!)
+            if let imageName = StoreSetup.getItemImage(item: item!) {
+                iconView.image = UIImage(named: imageName)
+            }
+        }
+    }
+    
     var mode: SetupCellType? {
         didSet {
             switch mode! {
@@ -30,16 +41,9 @@ class StoreSetupTableViewCell: UITableViewCell {
         }
     }
     
-    func setTextData(labelText labelText: String, sublineText: String?, imageName: String?) {
-        titleLabel.text = labelText
-        subtitleLabel.text = sublineText
-        if let name = imageName {
-            iconView.image = UIImage(named: name)
-        }
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        arrowView.hidden = true
+        swichView.hidden = true
     }
 }

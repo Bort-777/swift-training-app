@@ -14,51 +14,72 @@ enum SetupCellType {
     case defaultType
 }
 
-class StoreSetupData {
-    private let items = ["Vendors",
-                         "Departments",
-                         "Taxes",
-                         "Cost Tracking",
-                         "Look up item descriptions",
-                         "Clear Inventory",
-                         "Restore from backup"]
+enum StoreSetup : Int{
+    case vendors
+    case department
+    case taxes
+    case costTracking
+    case lookDescriptions
+    case clearInventory
+    case restore
     
-    private let type = ["Departments" : SetupCellType.arrowType,
-                         "Vendors": SetupCellType.arrowType,
-                         "Taxes": SetupCellType.arrowType,
-                         "Cost Tracking": SetupCellType.switchType,
-                         "Look up item descriptions": SetupCellType.switchType,
-                         "Clear Inventory": SetupCellType.defaultType,
-                         "Restore from backup": SetupCellType.defaultType]
+    static let count: Int = {
+        var max: Int = 0
+        while let _ = StoreSetup(rawValue: max) { max += 1 }
+        return max
+    }()
     
-    private let subtitle = ["Departments" : "21 configured",
-                            "Vendors" : "0 configured",
-                            "Taxes" : "15 configured",
-                            "Clear Inventory" : "18 configured"]
-    
-    private let imageNames = ["Departments" : "dept"]
-    
-    
-    var count: Int {
-        get {
-            return items.count
+    static func getItemType(item item: StoreSetup) -> SetupCellType {
+        switch item {
+        case .vendors, .department, .taxes:
+            return .arrowType
+        case .costTracking, .lookDescriptions:
+            return .switchType
+        case .clearInventory, .restore:
+            return .defaultType
         }
     }
     
-    func getItemName(index: Int) -> String {
-        return items[index]
+    static func getItemName(item item: StoreSetup) -> String {
+        switch item {
+        case .vendors:
+            return "Vendors"
+        case .department:
+            return "Department"
+        case  .taxes:
+            return "Taxes"
+        case  .costTracking:
+            return "Cost Tracking"
+        case  .lookDescriptions:
+            return "Look Descriptions"
+        case  .clearInventory:
+            return "Clear Inventory"
+        case .restore:
+            return "Restore"
+        }
     }
     
-    func getItemImage(title key: String) -> String? {
-        return imageNames[key]
+    static func getItemSubtitle(item item: StoreSetup) -> String? {
+        switch item {
+        case .vendors:
+            return "Vendors"
+        case .department:
+            return "Department"
+        case  .taxes:
+            return "Taxes"
+        case  .clearInventory:
+            return "Clear Inventory"
+        default:
+            return nil
+        }
     }
     
-    func getItemSubtitle(title key: String) -> String? {
-        return subtitle[key]
+    static func getItemImage(item item: StoreSetup) -> String? {
+        switch item {
+        case .department:
+            return "dept"
+        default:
+            return nil
+        }
     }
-    
-    func getItemType(title key: String) -> SetupCellType {
-        return type[key]!
-    }
-    
 }

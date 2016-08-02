@@ -68,8 +68,8 @@
 			children = (
 				EA6C3C461D4F530B00017721 /* AppDelegate.swift */,
 				EA6C3C681D4F695000017721 /* Model */,
-				EA6C3C621D4F65FE00017721 /* View */,
 				EA6C3C631D4F660D00017721 /* Controller */,
+				EA6C3C621D4F65FE00017721 /* View */,
 				EA6C3C691D4F696100017721 /* Other */,
 			);
 			path = testApp;
@@ -96,8 +96,8 @@
 		EA6C3C681D4F695000017721 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA6C3C6A1D4F69DD00017721 /* Menu.swift */,
 				EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */,
+				EA6C3C6A1D4F69DD00017721 /* Menu.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = testApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Itransition.testApp;
@@ -318,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = testApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Itransition.testApp;

@@ -10,7 +10,6 @@ import UIKit
 
 class StoreSetupTableViewController: UIViewController {
     
-    private var data = StoreSetupData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +19,14 @@ class StoreSetupTableViewController: UIViewController {
 extension StoreSetupTableViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return data.count
+        return StoreSetup.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(STORE_SETUP, forIndexPath: indexPath) as! StoreSetupTableViewCell
-        let title = data.getItemName(indexPath.row)
-        
-        cell.mode = data.getItemType(title: title)
-        cell.setTextData(labelText: title, sublineText: data.getItemSubtitle(title: title), imageName: data.getItemImage(title: title))
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constant.storeSetup, forIndexPath: indexPath) as! StoreSetupTableViewCell
+        if let menuItem = StoreSetup(rawValue: indexPath.row) {
+            cell.item = menuItem
+        }
         
         return cell
     }
