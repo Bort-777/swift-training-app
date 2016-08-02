@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuTableViewController: UIViewController {
+class MenuController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
@@ -17,7 +17,7 @@ class MenuTableViewController: UIViewController {
     }
 }
 
-extension MenuTableViewController : UITableViewDataSource {
+extension MenuController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Menu.count
@@ -27,11 +27,12 @@ extension MenuTableViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(MenuCell.cellIdentifier, forIndexPath: indexPath) as! MenuCell
         
         cell.item = MenuItem(index: indexPath.row)
+        
         return cell
     }
 }
 
-extension MenuTableViewController : UITableViewDelegate {
+extension MenuController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if Menu.menuSegue(item: Menu(rawValue: indexPath.row)!) != nil {

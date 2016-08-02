@@ -8,33 +8,27 @@
 
 import UIKit
 
-class StoreSetupTableViewController: UIViewController {
-    
-//    var tableView: UITableView {
-//        get {
-//            return view as! UITableView
-//        }
-//    }
+class StoreSetupController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
-extension StoreSetupTableViewController : UITableViewDelegate {
+extension StoreSetupController : UITableViewDelegate {
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 250
     }
 }
 
-extension StoreSetupTableViewController : UITableViewDataSource {
+extension StoreSetupController : UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return StoreSetup.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("storeCell", forIndexPath: indexPath) as! StoreSetupCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(StoreSetupCell.cellIdentifier, forIndexPath: indexPath) as! StoreSetupCell
        
         cell.item = StoreSetupItem(index: indexPath.row)
         

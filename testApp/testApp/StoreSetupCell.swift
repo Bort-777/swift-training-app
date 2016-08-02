@@ -10,6 +10,8 @@ import UIKit
 
 class StoreSetupCell: UITableViewCell {
     
+    static let cellIdentifier = String(StoreSetupCell)
+    
     @IBOutlet private weak var iconView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!

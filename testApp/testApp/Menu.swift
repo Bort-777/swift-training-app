@@ -9,7 +9,9 @@
 import Foundation
 
 enum Menu: Int {
-    case inventoryList, stockLevels, storeSetup
+    case inventoryList
+    case stockLevels
+    case storeSetup
     
     static let count: Int = {
         var max: Int = 0

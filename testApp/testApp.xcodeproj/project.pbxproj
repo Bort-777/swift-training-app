@@ -7,30 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D1F51D50F4F1008E55FF /* LogInController.swift */; };
 		EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C461D4F530B00017721 /* AppDelegate.swift */; };
 		EA6C3C4C1D4F530B00017721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4A1D4F530B00017721 /* Main.storyboard */; };
 		EA6C3C4E1D4F530B00017721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4D1D4F530B00017721 /* Assets.xcassets */; };
 		EA6C3C511D4F530B00017721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4F1D4F530B00017721 /* LaunchScreen.storyboard */; };
-		EA6C3C651D4F665300017721 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C641D4F665300017721 /* MenuTableViewController.swift */; };
+		EA6C3C651D4F665300017721 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C641D4F665300017721 /* MenuController.swift */; };
 		EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C6A1D4F69DD00017721 /* Menu.swift */; };
 		EA6C3C6F1D4F71FB00017721 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */; };
-		EA6C3C791D4F72BA00017721 /* StoreSetupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C781D4F72BA00017721 /* StoreSetupTableViewController.swift */; };
+		EA6C3C791D4F72BA00017721 /* StoreSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */; };
 		EA6C3C7B1D4F795E00017721 /* StoreSetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */; };
 		EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */; };
 		EA6C3C871D4FB4D600017721 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C861D4FB4D600017721 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA19D1F51D50F4F1008E55FF /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		EA6C3C431D4F530B00017721 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6C3C461D4F530B00017721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6C3C4B1D4F530B00017721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA6C3C4D1D4F530B00017721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA6C3C501D4F530B00017721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA6C3C521D4F530B00017721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA6C3C641D4F665300017721 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		EA6C3C641D4F665300017721 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		EA6C3C6A1D4F69DD00017721 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
-		EA6C3C781D4F72BA00017721 /* StoreSetupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupTableViewController.swift; sourceTree = "<group>"; };
+		EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupController.swift; sourceTree = "<group>"; };
 		EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupData.swift; sourceTree = "<group>"; };
 		EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupCell.swift; sourceTree = "<group>"; };
 		EA6C3C861D4FB4D600017721 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -95,8 +97,9 @@
 		EA6C3C631D4F660D00017721 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EA6C3C781D4F72BA00017721 /* StoreSetupTableViewController.swift */,
-				EA6C3C641D4F665300017721 /* MenuTableViewController.swift */,
+				EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */,
+				EA6C3C641D4F665300017721 /* MenuController.swift */,
+				EA19D1F51D50F4F1008E55FF /* LogInController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -193,11 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6C3C791D4F72BA00017721 /* StoreSetupTableViewController.swift in Sources */,
+				EA6C3C791D4F72BA00017721 /* StoreSetupController.swift in Sources */,
 				EA6C3C6F1D4F71FB00017721 /* MenuCell.swift in Sources */,
 				EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */,
 				EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */,
-				EA6C3C651D4F665300017721 /* MenuTableViewController.swift in Sources */,
+				EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */,
+				EA6C3C651D4F665300017721 /* MenuController.swift in Sources */,
 				EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */,
 				EA6C3C7B1D4F795E00017721 /* StoreSetupData.swift in Sources */,
 				EA6C3C871D4FB4D600017721 /* Constants.swift in Sources */,
