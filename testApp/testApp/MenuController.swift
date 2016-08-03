@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+class MenuController: TemplateController {
 
     @IBOutlet private weak var tableView: UITableView!
     

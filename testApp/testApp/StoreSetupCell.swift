@@ -28,7 +28,7 @@ class StoreSetupCell: UITableViewCell {
                 iconView.image = UIImage(named: imageName)
             }
             else {
-                iconView.removeFromSuperview()
+                
             }
         }
     }

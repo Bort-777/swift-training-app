@@ -20,9 +20,11 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="254" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-0e-f1d">
                                 <rect key="frame" x="20" y="282" width="280" height="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FIZ-tT-PlA"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRN-Hd-74T">
                                 <rect key="frame" x="91" y="320" width="139" height="25"/>
@@ -56,9 +58,11 @@
                                 <rect key="frame" x="20" y="353" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yD5-fN-AUt"/>
+                                </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KJI-hn-0So" firstAttribute="centerX" secondItem="DUE-Hw-piy" secondAttribute="centerX" id="0vg-Xf-ej8"/>
                             <constraint firstItem="OKI-0e-f1d" firstAttribute="top" secondItem="xTx-XQ-1l6" secondAttribute="bottom" constant="8" symbolic="YES" id="2ve-s9-bEp"/>
@@ -79,6 +83,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="bottomConstraint" destination="IrD-5N-zRh" id="9sI-kb-rlx"/>
                         <outlet property="loginIdField" destination="OKI-0e-f1d" id="DWu-e6-gOB"/>
                         <outlet property="passwordField" destination="KJI-hn-0So" id="igf-4Q-lpZ"/>
                     </connections>
@@ -106,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="834" y="426"/>
         </scene>
-        <!--Menu Controller-->
+        <!--Menu-->
         <scene sceneID="cPd-n0-ghm">
             <objects>
                 <viewController id="QL5-lW-0tv" customClass="MenuController" customModule="testApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,7 +125,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aG9-6m-qOC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="120" id="RkS-av-P7a" customClass="MenuCell" customModule="testApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="120"/>
@@ -170,7 +175,9 @@
                             <constraint firstItem="aG9-6m-qOC" firstAttribute="leading" secondItem="cwp-3a-8Na" secondAttribute="leading" id="tGu-UX-ihR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QSV-fZ-bkW"/>
+                    <navigationItem key="navigationItem" title="Menu" id="QSV-fZ-bkW">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Ex5-Lw-GSY"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="gPH-4M-grN" kind="show" identifier="storeSetup" id="J4n-4I-nzv"/>
@@ -180,7 +187,7 @@
             </objects>
             <point key="canvasLocation" x="1232" y="426"/>
         </scene>
-        <!--Store Setup Controller-->
+        <!--Store Setup-->
         <scene sceneID="o32-js-G6R">
             <objects>
                 <viewController id="gPH-4M-grN" customClass="StoreSetupController" customModule="testApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -194,7 +201,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EFu-aO-pL1">
                                 <rect key="frame" x="8" y="0.0" width="304" height="480"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreSetupCell" rowHeight="50" id="gqx-jS-y8f" customClass="StoreSetupCell" customModule="testApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="304" height="50"/>
@@ -272,6 +279,7 @@
                             <constraint firstItem="EFu-aO-pL1" firstAttribute="bottom" secondItem="hJi-kY-dfa" secondAttribute="top" id="vrT-5M-fWp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Store Setup" id="Wpx-Ph-79m"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPf-Bu-qdd" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoreSetupController: UIViewController {
+class StoreSetupController: TemplateController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
