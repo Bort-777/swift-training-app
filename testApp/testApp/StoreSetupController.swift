@@ -8,10 +8,11 @@
 
 import UIKit
 
-class StoreSetupController: TemplateController {
+class StoreSetupController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurationNavigationBar()
     }
 }
 extension StoreSetupController : UITableViewDelegate {

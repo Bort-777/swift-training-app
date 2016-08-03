@@ -34,30 +34,21 @@ enum Menu: Int {
 class MenuItem {
     
     var item: Menu
+    var menuTitle: String
+    var menuImage: String
     
     init(index: Int) {
         item = Menu(rawValue: index)!
-    }
-    
-    var menuTitle: String {
         switch item {
         case .inventoryList:
-            return "Inventory List"
+            menuTitle = "Inventory List"
+            menuImage = "inventoryLogo"
         case .stockLevels:
-            return "Stock Levels"
+            menuTitle = "Stock Levels"
+            menuImage = "adjustLogo"
         case .storeSetup:
-            return "Store Setup"
-        }
-    }
-    
-    var menuImage: String {
-        switch item {
-        case .inventoryList:
-            return "inventoryLogo"
-        case .stockLevels:
-            return "adjustLogo"
-        case .storeSetup:
-            return "storeLogo"
+            menuTitle = "Store Setup"
+            menuImage = "storeLogo"
         }
     }
 }

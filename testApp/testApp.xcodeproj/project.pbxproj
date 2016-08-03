@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D1F51D50F4F1008E55FF /* LogInController.swift */; };
-		EA459E131D51E4C10051B3A7 /* TemplateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA459E121D51E4C10051B3A7 /* TemplateController.swift */; };
+		EA459E131D51E4C10051B3A7 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA459E121D51E4C10051B3A7 /* BaseController.swift */; };
 		EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C461D4F530B00017721 /* AppDelegate.swift */; };
 		EA6C3C4C1D4F530B00017721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4A1D4F530B00017721 /* Main.storyboard */; };
 		EA6C3C4E1D4F530B00017721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4D1D4F530B00017721 /* Assets.xcassets */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		EA19D1F51D50F4F1008E55FF /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
-		EA459E121D51E4C10051B3A7 /* TemplateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateController.swift; sourceTree = "<group>"; };
+		EA459E121D51E4C10051B3A7 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		EA6C3C431D4F530B00017721 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6C3C461D4F530B00017721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6C3C4B1D4F530B00017721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 				EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */,
 				EA6C3C641D4F665300017721 /* MenuController.swift */,
 				EA19D1F51D50F4F1008E55FF /* LogInController.swift */,
-				EA459E121D51E4C10051B3A7 /* TemplateController.swift */,
+				EA459E121D51E4C10051B3A7 /* BaseController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 				EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */,
 				EA6C3C7B1D4F795E00017721 /* StoreSetupData.swift in Sources */,
 				EA6C3C871D4FB4D600017721 /* Constants.swift in Sources */,
-				EA459E131D51E4C10051B3A7 /* TemplateController.swift in Sources */,
+				EA459E131D51E4C10051B3A7 /* BaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

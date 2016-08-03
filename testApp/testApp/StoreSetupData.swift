@@ -31,71 +31,52 @@ enum StoreSetup : Int{
 }
 
 class StoreSetupItem {
+    
     var item: StoreSetup
+    var type: SetupCellType
+    var title: String
+    var subtitle: String?
+    var imageName: String?
     
     init(index: Int) {
         item = StoreSetup(rawValue: index)!
-    }
-    
-    var getItemType: SetupCellType {
-        switch item {
-        case .vendors, .department, .taxes:
-            return .arrowType
-        case .costTracking, .lookDescriptions:
-            return .switchType
-        case .clearInventory, .restore:
-            return .defaultType
-        }
-    }
-    
-    var getItemName: String {
         switch item {
         case .vendors:
-            return "Vendors"
+            title = "Vendors"
+            subtitle = "Vendors"
+            type = .arrowType
+            imageName = "dept"
+            
         case .department:
-            return "Department"
+            title = "Department"
+            subtitle = "Vendors"
+            type = .arrowType
+            imageName = "vendors"
+            
         case  .taxes:
-            return "Taxes"
+            title = "Taxes"
+            subtitle = "Vendors"
+            type = .arrowType
+            imageName = "taxes"
+            
         case  .costTracking:
-            return "Cost Tracking"
+            title = "Cost Tracking"
+            type = .switchType
+            imageName = "cost"
+            
         case  .lookDescriptions:
-            return "Look Descriptions"
+            title = "Look Descriptions"
+            type = .switchType
+            imageName = "lookup"
+            
         case  .clearInventory:
-            return "Clear Inventory"
+            title = "Clear Inventory"
+            subtitle = "Vendors"
+            type = .defaultType
+
         case .restore:
-            return "Restore"
-        }
-    }
-    
-    var getItemSubtitle: String? {
-        switch item {
-        case .vendors:
-            return "Vendors"
-        case .department:
-            return "Department"
-        case  .taxes:
-            return "Taxes"
-        case  .clearInventory:
-            return "Clear Inventory"
-        default:
-            return nil
-        }
-    }
-    
-    var getItemImage: String? {
-        switch item {
-        case .department:
-            return "dept"
-        case .vendors:
-            return "vendors"
-        case .taxes:
-            return "taxes"
-        case .costTracking:
-            return "cost"
-        case .lookDescriptions:
-            return "lookup"
-        default:
-            return nil
+            title = "Restore"
+            type = .defaultType
         }
     }
 }

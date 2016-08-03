@@ -21,14 +21,15 @@ class StoreSetupCell: UITableViewCell {
     
     var item: StoreSetupItem? {
         didSet {
-            mode = item!.getItemType
-            titleLabel.text = item!.getItemName
-            subtitleLabel.text = item!.getItemSubtitle
-            if let imageName = item!.getItemImage {
+            mode = item!.type
+            titleLabel.text = item!.title
+            subtitleLabel.text = item!.subtitle
+            if let imageName = item!.imageName {
                 iconView.image = UIImage(named: imageName)
             }
             else {
-                
+                iconView.image = nil
+                //titleLabel.frame = CGRect(x: iconView.frame.minX, y: iconView.frame.minY, width: 0, height: 0)
             }
         }
     }
@@ -38,7 +39,9 @@ class StoreSetupCell: UITableViewCell {
             switch mode! {
                 case .arrowType:
                     swichView.hidden = true
+                    arrowView.hidden = false
                 case .switchType:
+                    swichView.hidden = false
                     arrowView.hidden = true
                 case .defaultType:
                     swichView.hidden = true

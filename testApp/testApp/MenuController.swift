@@ -8,12 +8,13 @@
 
 import UIKit
 
-class MenuController: TemplateController {
+class MenuController: BaseController {
 
     @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurationNavigationBar()
     }
 }
 
@@ -24,8 +25,8 @@ extension MenuController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(MenuCell.cellIdentifier, forIndexPath: indexPath) as! MenuCell
         
+        let cell = tableView.dequeueReusableCellWithIdentifier(MenuCell.cellIdentifier, forIndexPath: indexPath) as! MenuCell
         cell.item = MenuItem(index: indexPath.row)
         
         return cell

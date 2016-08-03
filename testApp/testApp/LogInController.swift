@@ -8,49 +8,49 @@
 
 import UIKit
 
-class LogInController: TemplateController {
+class LogInController: BaseController {
 
     @IBOutlet weak var loginIdField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var logInButton: UIButton!
     
     private var keyboardActive = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogInController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogInController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+        keyboardOn()
     }
     
-    func keyboardWillShow(notification:NSNotification) {
-        if !keyboardActive {
-            keyboardActive = !keyboardActive
-            adjustingHeight(keyboardActive, notification: notification)
-        }
-    }
-    
-    func keyboardWillHide(notification:NSNotification) {
-        keyboardActive = !keyboardActive
-        adjustingHeight(keyboardActive, notification: notification)
-    }
-    
-    func adjustingHeight(show:Bool, notification:NSNotification) {
+    override func adjustingHeight(show:Bool, notification:NSNotification) {
         var userInfo = notification.userInfo!
         let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
         let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
-        let changeInHeight = (CGRectGetHeight(keyboardFrame)) * (show ? 1 : -1)
+        let changeInHeight = CGRectGetHeight(keyboardFrame)
         
         UIView.animateWithDuration(animationDurarion, animations: { () -> Void in
-            self.bottomConstraint.constant += changeInHeight
+            self.bottomConstraint.constant = show ? changeInHeight : 8
         })
     }
+    
+    @IBAction func touchLogIn(sender: AnyObject) {
+        self.performSegueWithIdentifier(Constant.sLogIn, sender: self)
+    }
+    
 }
 
 extension LogInController: UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        switch textField {
+        case loginIdField:
+            passwordField.becomeFirstResponder()
+        case passwordField:
+            textField.resignFirstResponder()
+            touchLogIn(logInButton)
+        default:
+            textField.resignFirstResponder()
+
+        }
         return true
     }
     
