@@ -29,17 +29,17 @@ class LogInController: BaseController {
         let changeInHeight = CGRectGetHeight(keyboardFrame)
         
         UIView.animateWithDuration(animationDurarion, animations: { () -> Void in
-            self.bottomConstraint.constant = show ? changeInHeight : 8
+            self.bottomConstraint.constant = show ? changeInHeight : 180
         })
     }
     
     @IBAction func touchLogIn(sender: AnyObject) {
         self.performSegueWithIdentifier(Constant.sLogIn, sender: self)
     }
-    
 }
 
 extension LogInController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         switch textField {
         case loginIdField:
@@ -49,11 +49,8 @@ extension LogInController: UITextFieldDelegate {
             touchLogIn(logInButton)
         default:
             textField.resignFirstResponder()
-
         }
         return true
     }
-    
-    
 }
 	

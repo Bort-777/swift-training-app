@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="254" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-0e-f1d">
-                                <rect key="frame" x="20" y="239" width="280" height="30"/>
+                                <rect key="frame" x="24" y="251" width="552" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <connections>
@@ -27,7 +27,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRN-Hd-74T">
-                                <rect key="frame" x="91" y="277" width="139" height="25"/>
+                                <rect key="frame" x="95" y="289" width="411" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Bpm-No-udb"/>
                                 </constraints>
@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merchant ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTx-XQ-1l6">
-                                <rect key="frame" x="57" y="206" width="206" height="25"/>
+                                <rect key="frame" x="61" y="218" width="478" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="flH-Jk-8oH"/>
                                 </constraints>
@@ -45,21 +45,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUE-Hw-piy">
-                                <rect key="frame" x="13" y="424" width="294" height="48"/>
+                                <rect key="frame" x="17" y="372" width="566" height="48"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Log In" backgroundImage="bigBlueButton"/>
                                 <connections>
                                     <action selector="touchLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxY-LL-KFl"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-7B-PLQ">
-                                <rect key="frame" x="120" y="52" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="YBd-w7-MBx"/>
-                                </constraints>
-                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJI-hn-0So">
+                                <rect key="frame" x="24" y="322" width="552" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yD5-fN-AUt"/>
+                                </connections>
+                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8as-JX-sRA">
-                                <rect key="frame" x="68" y="140" width="185" height="28"/>
+                                <rect key="frame" x="208" y="152" width="185" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HARBOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyz-nH-9Vq">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="28"/>
@@ -76,50 +79,46 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IVENTORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9w-8d-j4y">
-                                <rect key="frame" x="113" y="161" width="94" height="21"/>
+                                <rect key="frame" x="117" y="173" width="366" height="33"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJI-hn-0So">
-                                <rect key="frame" x="20" y="310" width="280" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yD5-fN-AUt"/>
-                                </connections>
-                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dept" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-7B-PLQ">
+                                <rect key="frame" x="260" y="64" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Fb5-X1-Xvx"/>
+                                    <constraint firstAttribute="width" constant="80" id="YBd-w7-MBx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14824029803276062" green="0.071664534509181976" blue="0.034737125039100647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OKI-0e-f1d" firstAttribute="trailing" secondItem="KJI-hn-0So" secondAttribute="trailing" id="1nn-gg-Mhy"/>
                             <constraint firstItem="OKI-0e-f1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="7im-nx-55l"/>
                             <constraint firstItem="KJI-hn-0So" firstAttribute="centerX" secondItem="DUE-Hw-piy" secondAttribute="centerX" id="9cV-nz-dHJ"/>
-                            <constraint firstItem="nXe-7B-PLQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="EKX-xN-Kb1"/>
                             <constraint firstItem="xTx-XQ-1l6" firstAttribute="top" secondItem="8as-JX-sRA" secondAttribute="bottom" constant="38" id="EUm-hp-EKI"/>
                             <constraint firstItem="xTx-XQ-1l6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="HLS-k0-W1K"/>
                             <constraint firstItem="OKI-0e-f1d" firstAttribute="leading" secondItem="KJI-hn-0So" secondAttribute="leading" id="Peh-Cx-ukl"/>
                             <constraint firstItem="KJI-hn-0So" firstAttribute="top" secondItem="dRN-Hd-74T" secondAttribute="bottom" constant="8" symbolic="YES" id="Sg0-ju-Ng4"/>
                             <constraint firstItem="xTx-XQ-1l6" firstAttribute="centerX" secondItem="OKI-0e-f1d" secondAttribute="centerX" id="bOS-vI-xmb"/>
-                            <constraint firstItem="xTx-XQ-1l6" firstAttribute="top" secondItem="U9w-8d-j4y" secondAttribute="bottom" constant="24" id="cHD-kM-mJ9"/>
+                            <constraint firstItem="xTx-XQ-1l6" firstAttribute="top" secondItem="U9w-8d-j4y" secondAttribute="bottom" constant="12" id="cHD-kM-mJ9"/>
                             <constraint firstItem="OKI-0e-f1d" firstAttribute="top" secondItem="xTx-XQ-1l6" secondAttribute="bottom" constant="8" symbolic="YES" id="di3-ct-6Rk"/>
                             <constraint firstItem="nXe-7B-PLQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ems-FC-I8w"/>
                             <constraint firstItem="8as-JX-sRA" firstAttribute="centerX" secondItem="U9w-8d-j4y" secondAttribute="centerX" id="jqz-RU-lly"/>
                             <constraint firstItem="DUE-Hw-piy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-3" id="koL-0g-iED"/>
                             <constraint firstItem="U9w-8d-j4y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="n9d-ly-3WI"/>
-                            <constraint firstItem="DUE-Hw-piy" firstAttribute="top" secondItem="KJI-hn-0So" secondAttribute="bottom" constant="84" id="odg-O0-4jz"/>
+                            <constraint firstItem="DUE-Hw-piy" firstAttribute="top" secondItem="KJI-hn-0So" secondAttribute="bottom" constant="20" id="odg-O0-4jz"/>
                             <constraint firstItem="nXe-7B-PLQ" firstAttribute="centerX" secondItem="8as-JX-sRA" secondAttribute="centerX" id="orF-V7-cXe"/>
                             <constraint firstItem="U9w-8d-j4y" firstAttribute="centerX" secondItem="xTx-XQ-1l6" secondAttribute="centerX" id="pSI-AM-BIe"/>
                             <constraint firstItem="dRN-Hd-74T" firstAttribute="top" secondItem="OKI-0e-f1d" secondAttribute="bottom" constant="8" symbolic="YES" id="pug-q0-vMc"/>
                             <constraint firstItem="OKI-0e-f1d" firstAttribute="centerX" secondItem="dRN-Hd-74T" secondAttribute="centerX" id="pwS-Tz-0qu"/>
                             <constraint firstItem="8as-JX-sRA" firstAttribute="top" secondItem="nXe-7B-PLQ" secondAttribute="bottom" constant="8" symbolic="YES" id="qLB-xs-eC6"/>
                             <constraint firstItem="U9w-8d-j4y" firstAttribute="top" secondItem="nXe-7B-PLQ" secondAttribute="bottom" constant="29" id="t1a-aW-cu3"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DUE-Hw-piy" secondAttribute="bottom" constant="8" symbolic="YES" id="wQD-Jt-Yip"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DUE-Hw-piy" secondAttribute="bottom" constant="180" id="wQD-Jt-Yip"/>
                             <constraint firstItem="dRN-Hd-74T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="zaX-LW-YVH"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="wQD-Jt-Yip" id="PDP-6l-MbZ"/>
                         <outlet property="logInButton" destination="DUE-Hw-piy" id="trJ-Gx-tFC"/>
@@ -218,7 +217,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="QSV-fZ-bkW">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Ex5-Lw-GSY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="Ex5-Lw-GSY"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -229,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="1232" y="426"/>
         </scene>
-        <!--Store Setup-->
+        <!--Title-->
         <scene sceneID="o32-js-G6R">
             <objects>
                 <viewController id="gPH-4M-grN" customClass="StoreSetupController" customModule="testApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -321,7 +320,7 @@
                             <constraint firstItem="EFu-aO-pL1" firstAttribute="bottom" secondItem="hJi-kY-dfa" secondAttribute="top" id="XeE-p1-bmU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Store Setup" id="Wpx-Ph-79m"/>
+                    <navigationItem key="navigationItem" title="Title" id="CKm-h2-Pht"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPf-Bu-qdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,5 +331,6 @@
     <resources>
         <image name="arrow" width="18" height="18"/>
         <image name="bigBlueButton" width="282" height="48"/>
+        <image name="dept" width="36" height="36"/>
     </resources>
 </document>

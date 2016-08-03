@@ -36,6 +36,7 @@ extension MenuController: UITableViewDataSource {
 extension MenuController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         if Menu.menuSegue(item: Menu(rawValue: indexPath.row)!) != nil {
             self.performSegueWithIdentifier(Menu.menuSegue(item: Menu(rawValue: indexPath.row)!)!, sender: self)
         }

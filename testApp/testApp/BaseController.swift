@@ -24,7 +24,7 @@ class BaseController: UIViewController {
         let backgroundView = UIImageView(frame: self.view.frame);
         backgroundView.contentMode = .ScaleAspectFill
         let background = UIImage(named: "viewBgr");
-        
+
         backgroundView.image = background;
         self.view.insertSubview(backgroundView, atIndex: 0);
     }
@@ -35,6 +35,13 @@ class BaseController: UIViewController {
         UINavigationBar.appearance().clipsToBounds = true
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "bottomBar"), forBarPosition: UIBarPosition.Any, barMetrics: UIBarMetrics.Default)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        navigationItem.leftBarButtonItem?.setBackgroundImage(UIImage(named: "rightItem"), forState: .Normal, barMetrics: .Default)
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
+        
+        // TODO;- fix
+        navigationItem.backBarButtonItem?.setBackgroundImage(UIImage(named: "backButton"), forState: .Normal, barMetrics: .Default)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
         
         configurationStatusBar()
     }

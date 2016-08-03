@@ -27,8 +27,6 @@ enum Menu: Int {
             return nil
         }
     }
-
-    
    }
 
 class MenuItem {

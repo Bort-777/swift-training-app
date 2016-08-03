@@ -14,6 +14,10 @@ class StoreSetupController: BaseController {
         super.viewDidLoad()
         configurationNavigationBar()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        configurationNavigationBar()
+    }
 }
 extension StoreSetupController : UITableViewDelegate {
 
@@ -29,25 +33,26 @@ extension StoreSetupController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(StoreSetupCell.cellIdentifier, forIndexPath: indexPath) as! StoreSetupCell
-       
         cell.item = StoreSetupItem(index: indexPath.row)
-        
-//        let backgroundImage: UIImage?
-//        
-//        switch indexPath.row {
-//        case 0:
-//            backgroundImage = UIImage(named: "cellTop")
-//        case tableView.numberOfRowsInSection(indexPath.section) - 1:
-//            backgroundImage = UIImage(named: "cellBottom")
-//        default:
-//            backgroundImage = UIImage(named: "cellMiddleBottom")
-//        }
-//        
-//        let imageView = UIImageView(image: backgroundImage)
-//        cell.backgroundView = imageView
-
-        
+        cell.backgroundView = configurationCellBackground(index: indexPath.row)
+    
         return cell
+    }
+    
+    func configurationCellBackground(index index: Int) -> UIImageView {
+        let backgroundImage: UIImage?
+        
+        switch index {
+        case 0:
+            backgroundImage = UIImage(named: "cellTop")
+        case StoreSetup.count - 1:
+            backgroundImage = UIImage(named: "cellBottom")
+        default:
+            backgroundImage = UIImage(named: "cellMiddleBottom")
+        }
+        
+        return UIImageView(image: backgroundImage)
     }
 }
