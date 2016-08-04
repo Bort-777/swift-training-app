@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA018D061D533E3600D134C2 /* eUINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D051D533E3600D134C2 /* eUINavigationBar.swift */; };
-		EA018D081D533F4600D134C2 /* eUIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D071D533F4600D134C2 /* eUIBarButtonItem.swift */; };
-		EA018D0B1D533FD800D134C2 /* eUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D0A1D533FD800D134C2 /* eUITableView.swift */; };
+		EA018D061D533E3600D134C2 /* UINavigationBar+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D051D533E3600D134C2 /* UINavigationBar+Style.swift */; };
+		EA018D081D533F4600D134C2 /* UIBarButtonItem+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D071D533F4600D134C2 /* UIBarButtonItem+Style.swift */; };
+		EA018D0B1D533FD800D134C2 /* UITableView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D0A1D533FD800D134C2 /* UITableView+Style.swift */; };
 		EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D1F51D50F4F1008E55FF /* LogInController.swift */; };
+		EA3B84B81D538A0D009AD578 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */; };
+		EA3B84BA1D538AF9009AD578 /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */; };
+		EA3B84BC1D538BE4009AD578 /* DepartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */; };
+		EA3B84BF1D539479009AD578 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B84BD1D539479009AD578 /* Alamofire.framework */; };
+		EA3B84C01D539479009AD578 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B84BE1D539479009AD578 /* SwiftyJSON.framework */; };
+		EA3B84C41D53A1FA009AD578 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84C31D53A1FA009AD578 /* RequestManager.swift */; };
+		EA3B84C61D53B348009AD578 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84C51D53B348009AD578 /* Department.swift */; };
 		EA459E131D51E4C10051B3A7 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA459E121D51E4C10051B3A7 /* BaseController.swift */; };
 		EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C461D4F530B00017721 /* AppDelegate.swift */; };
 		EA6C3C4C1D4F530B00017721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4A1D4F530B00017721 /* Main.storyboard */; };
@@ -26,10 +33,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA018D051D533E3600D134C2 /* eUINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eUINavigationBar.swift; sourceTree = "<group>"; };
-		EA018D071D533F4600D134C2 /* eUIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eUIBarButtonItem.swift; sourceTree = "<group>"; };
-		EA018D0A1D533FD800D134C2 /* eUITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eUITableView.swift; sourceTree = "<group>"; };
+		EA018D051D533E3600D134C2 /* UINavigationBar+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Style.swift"; sourceTree = "<group>"; };
+		EA018D071D533F4600D134C2 /* UIBarButtonItem+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Style.swift"; sourceTree = "<group>"; };
+		EA018D0A1D533FD800D134C2 /* UITableView+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Style.swift"; sourceTree = "<group>"; };
 		EA19D1F51D50F4F1008E55FF /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
+		EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
+		EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentController.swift; sourceTree = "<group>"; };
+		EA3B84BD1D539479009AD578 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		EA3B84BE1D539479009AD578 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		EA3B84C31D53A1FA009AD578 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		EA3B84C51D53B348009AD578 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		EA459E121D51E4C10051B3A7 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		EA6C3C431D4F530B00017721 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6C3C461D4F530B00017721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3B84BF1D539479009AD578 /* Alamofire.framework in Frameworks */,
+				EA3B84C01D539479009AD578 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,25 +76,29 @@
 		8683BDD61D50D8EB00C0C20F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */,
 				EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */,
 				EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */,
+				EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
 		};
-		EA018D091D533FBB00D134C2 /* extensions */ = {
+		EA018D091D533FBB00D134C2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EA018D051D533E3600D134C2 /* eUINavigationBar.swift */,
-				EA018D071D533F4600D134C2 /* eUIBarButtonItem.swift */,
-				EA018D0A1D533FD800D134C2 /* eUITableView.swift */,
+				EA018D051D533E3600D134C2 /* UINavigationBar+Style.swift */,
+				EA018D071D533F4600D134C2 /* UIBarButtonItem+Style.swift */,
+				EA018D0A1D533FD800D134C2 /* UITableView+Style.swift */,
 			);
-			name = extensions;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		EA6C3C3A1D4F530B00017721 = {
 			isa = PBXGroup;
 			children = (
+				EA3B84BD1D539479009AD578 /* Alamofire.framework */,
+				EA3B84BE1D539479009AD578 /* SwiftyJSON.framework */,
 				EA6C3C451D4F530B00017721 /* testApp */,
 				EA6C3C441D4F530B00017721 /* Products */,
 			);
@@ -108,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8683BDD61D50D8EB00C0C20F /* Cell */,
+				EA018D091D533FBB00D134C2 /* Extensions */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -115,11 +136,12 @@
 		EA6C3C631D4F660D00017721 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */,
-				EA6C3C641D4F665300017721 /* MenuController.swift */,
 				EA19D1F51D50F4F1008E55FF /* LogInController.swift */,
+				EA6C3C641D4F665300017721 /* MenuController.swift */,
 				EA459E121D51E4C10051B3A7 /* BaseController.swift */,
-				EA018D091D533FBB00D134C2 /* extensions */,
+				EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */,
+				EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */,
+				EA3B84C31D53A1FA009AD578 /* RequestManager.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -129,6 +151,7 @@
 			children = (
 				EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */,
 				EA6C3C6A1D4F69DD00017721 /* Menu.swift */,
+				EA3B84C51D53B348009AD578 /* Department.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -155,6 +178,7 @@
 				EA6C3C3F1D4F530B00017721 /* Sources */,
 				EA6C3C401D4F530B00017721 /* Frameworks */,
 				EA6C3C411D4F530B00017721 /* Resources */,
+				EA3B84C11D5394C0009AD578 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -211,23 +235,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EA3B84C11D5394C0009AD578 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA6C3C3F1D4F530B00017721 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3B84BA1D538AF9009AD578 /* DepartmentCell.swift in Sources */,
 				EA6C3C791D4F72BA00017721 /* StoreSetupController.swift in Sources */,
+				EA3B84C41D53A1FA009AD578 /* RequestManager.swift in Sources */,
 				EA6C3C6F1D4F71FB00017721 /* MenuCell.swift in Sources */,
 				EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */,
 				EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */,
+				EA3B84B81D538A0D009AD578 /* BaseTableCell.swift in Sources */,
 				EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */,
 				EA6C3C651D4F665300017721 /* MenuController.swift in Sources */,
-				EA018D081D533F4600D134C2 /* eUIBarButtonItem.swift in Sources */,
+				EA018D081D533F4600D134C2 /* UIBarButtonItem+Style.swift in Sources */,
 				EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */,
-				EA018D0B1D533FD800D134C2 /* eUITableView.swift in Sources */,
+				EA3B84C61D53B348009AD578 /* Department.swift in Sources */,
+				EA018D0B1D533FD800D134C2 /* UITableView+Style.swift in Sources */,
 				EA6C3C7B1D4F795E00017721 /* StoreSetupData.swift in Sources */,
 				EA6C3C871D4FB4D600017721 /* Constants.swift in Sources */,
-				EA018D061D533E3600D134C2 /* eUINavigationBar.swift in Sources */,
+				EA3B84BC1D538BE4009AD578 /* DepartmentController.swift in Sources */,
+				EA018D061D533E3600D134C2 /* UINavigationBar+Style.swift in Sources */,
 				EA459E131D51E4C10051B3A7 /* BaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +391,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = testApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Itransition.testApp;
@@ -356,6 +407,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = testApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Itransition.testApp;

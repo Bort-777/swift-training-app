@@ -37,6 +37,7 @@ class StoreSetupItem {
     var title: String
     var subtitle: String?
     var imageName: String?
+    var menuSegue: String?
     
     init(index: Int) {
         item = StoreSetup(rawValue: index)!
@@ -49,9 +50,10 @@ class StoreSetupItem {
             
         case .department:
             title = "Department"
-            subtitle = "Vendors"
+            subtitle = "12 items"
             type = .arrowType
             imageName = "vendors"
+            menuSegue = Constant.sDepartment
             
         case .taxes:
             title = "Taxes"

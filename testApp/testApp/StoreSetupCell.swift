@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoreSetupCell: UITableViewCell {
+class StoreSetupCell: BaseTableCell {
     
     static let cellIdentifier = String(StoreSetupCell)
     
@@ -28,6 +28,7 @@ class StoreSetupCell: UITableViewCell {
             titleLabel.text = item!.title
             if let subtitle = item!.subtitle {
                 subtitleLabel.text = subtitle
+                topTitleConstraint.active = true
             }
             else {
                 subtitleLabel.text = nil
@@ -35,12 +36,11 @@ class StoreSetupCell: UITableViewCell {
             }
             if let imageName = item!.imageName {
                 iconView.image = UIImage(named: imageName)
+                titleConstraint.active = true
             }
             else {
                 iconView.image = nil
                 titleConstraint.active = false
-                subtiteCostraint.active = false
-                //titleLabel.frame = CGRect(x: iconView.frame.minX, y: iconView.frame.minY, width: 0, height: 0)
             }
         }
     }
@@ -59,10 +59,5 @@ class StoreSetupCell: UITableViewCell {
                     arrowView.hidden = true
             }
         }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        backgroundColor = .clearColor()
     }
 }

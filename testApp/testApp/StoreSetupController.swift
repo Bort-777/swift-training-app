@@ -22,6 +22,14 @@ extension StoreSetupController : UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 56
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! StoreSetupCell
+        if let segue = cell.item!.menuSegue {
+            self.performSegueWithIdentifier(segue, sender: self)
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -35,7 +43,7 @@ extension StoreSetupController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(StoreSetupCell.cellIdentifier, forIndexPath: indexPath) as! StoreSetupCell
         cell.item = StoreSetupItem(index: indexPath.row)
-        cell.backgroundView = tableView.applyCustomBackgroundView(indexPath.row)
+        cell.cellPosition = tableView.tableCellPosition(at: indexPath)
         return cell
     }
 }

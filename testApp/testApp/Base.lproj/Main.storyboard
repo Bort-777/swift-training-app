@@ -270,8 +270,8 @@
                                                 <constraint firstItem="Qi8-PB-7s0" firstAttribute="top" secondItem="1ah-eU-hpN" secondAttribute="topMargin" constant="1" id="bB1-Dg-l7R"/>
                                                 <constraint firstItem="a3g-UX-wBa" firstAttribute="centerY" secondItem="Qi8-PB-7s0" secondAttribute="centerY" id="dSD-2k-W07"/>
                                                 <constraint firstItem="Jmo-ap-n7i" firstAttribute="leading" secondItem="1ah-eU-hpN" secondAttribute="leadingMargin" priority="999" constant="1" id="hWL-ib-mbk"/>
+                                                <constraint firstItem="Jmo-ap-n7i" firstAttribute="leading" secondItem="asF-3C-im0" secondAttribute="leading" id="kJD-pY-qqx"/>
                                                 <constraint firstItem="asF-3C-im0" firstAttribute="top" secondItem="1ah-eU-hpN" secondAttribute="topMargin" priority="999" constant="8" id="odW-ho-Tdv"/>
-                                                <constraint firstItem="Jmo-ap-n7i" firstAttribute="leading" secondItem="1ah-eU-hpN" secondAttribute="leadingMargin" constant="57" id="orj-El-6ox"/>
                                                 <constraint firstItem="a3g-UX-wBa" firstAttribute="top" secondItem="1ah-eU-hpN" secondAttribute="topMargin" constant="5" id="owp-I9-IxC"/>
                                                 <constraint firstItem="a3g-UX-wBa" firstAttribute="trailing" secondItem="Qi8-PB-7s0" secondAttribute="trailing" id="ufK-vB-D9K"/>
                                             </constraints>
@@ -279,7 +279,6 @@
                                         <connections>
                                             <outlet property="arrowView" destination="a3g-UX-wBa" id="e35-wW-zK1"/>
                                             <outlet property="iconView" destination="ZQY-Ds-TAh" id="s7a-5k-NTG"/>
-                                            <outlet property="subtiteCostraint" destination="orj-El-6ox" id="a2n-3u-7eM"/>
                                             <outlet property="subtitleLabel" destination="Jmo-ap-n7i" id="26Z-e4-eaF"/>
                                             <outlet property="swichView" destination="Qi8-PB-7s0" id="Xab-X7-cxU"/>
                                             <outlet property="titleConstraint" destination="33Z-ZG-gOM" id="aUu-Px-UJD"/>
@@ -304,10 +303,73 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="CKm-h2-Pht"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="gFM-3o-B8a" kind="show" identifier="department" id="aBQ-J8-5yE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPf-Bu-qdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1639" y="426"/>
+        </scene>
+        <!--Department Controller-->
+        <scene sceneID="AiL-5w-qD3">
+            <objects>
+                <viewController id="gFM-3o-B8a" customClass="DepartmentController" customModule="testApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2tp-87-jEa"/>
+                        <viewControllerLayoutGuide type="bottom" id="DK4-ZO-odA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x00-2g-1ML">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7IA-ag-EgZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DepartmentCell" id="8be-bV-gQ4" customClass="DepartmentCell" customModule="testApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8be-bV-gQ4" id="CwB-XR-5U8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQ7-I2-fhf">
+                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QQ7-I2-fhf" firstAttribute="centerY" secondItem="CwB-XR-5U8" secondAttribute="centerY" id="AzX-QN-zA4"/>
+                                                <constraint firstItem="QQ7-I2-fhf" firstAttribute="leading" secondItem="CwB-XR-5U8" secondAttribute="leadingMargin" id="jK3-L3-et6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gFM-3o-B8a" id="3KP-6E-qT0"/>
+                                    <outlet property="delegate" destination="gFM-3o-B8a" id="NbH-0K-jma"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7IA-ag-EgZ" firstAttribute="bottom" secondItem="DK4-ZO-odA" secondAttribute="top" id="TR0-bG-Szy"/>
+                            <constraint firstAttribute="trailing" secondItem="7IA-ag-EgZ" secondAttribute="trailing" id="iu8-al-fTY"/>
+                            <constraint firstItem="7IA-ag-EgZ" firstAttribute="leading" secondItem="x00-2g-1ML" secondAttribute="leading" id="qNz-Vq-TfL"/>
+                            <constraint firstItem="7IA-ag-EgZ" firstAttribute="top" secondItem="2tp-87-jEa" secondAttribute="bottom" id="slA-W3-WC5"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="7IA-ag-EgZ" id="kDz-E8-uqo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPK-M7-6bV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="242"/>
         </scene>
     </scenes>
     <resources>
