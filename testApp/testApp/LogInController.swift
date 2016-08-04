@@ -15,12 +15,13 @@ class LogInController: BaseController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var logInButton: UIButton!
     
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboardOn()
     }
     
-    override func adjustingHeight(show:Bool, notification:NSNotification) {
+    override func adjustingFrameHeight(show:Bool, notification:NSNotification) {
         var userInfo = notification.userInfo!
         let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
         let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
@@ -33,6 +34,10 @@ class LogInController: BaseController {
     
     @IBAction func touchLogIn() {
         self.performSegueWithIdentifier(Constant.sLogIn, sender: self)
+    }
+    
+    @IBAction func handlePinch(recognizer : UIGestureRecognizer) {
+        view.endEditing(true)
     }
 }
 

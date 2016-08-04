@@ -15,15 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         applyDefaultStyles()
         return true
     }
 
     func applyDefaultStyles() {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        UINavigationBar.appearance().applyDefaultStyles()
-        UIBarButtonItem.appearance().applyDefaultStyles()
+        UINavigationBar.applyDefaultStyles()
+        UIBarButtonItem.applyDefaultStyles()
     }
     
     func applicationWillResignActive(application: UIApplication) {

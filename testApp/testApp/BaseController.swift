@@ -12,11 +12,8 @@ class BaseController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurationBackground()
     }
-    
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        self.view.endEditing(true)
-//    }
     
     private func configurationBackground() {
         let backgroundView = UIImageView(frame: self.view.frame)
@@ -25,33 +22,20 @@ class BaseController: UIViewController {
         self.view.insertSubview(backgroundView, atIndex: 0)
     }
     
-//    func configurationNavigationBar() {
-    
-
-        
-//        configurationStatusBar()
-//    }
-    
-//    private func configurationStatusBar() {
-//        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
-//        view.backgroundColor = UIColor.blackColor()
-//        self.view.addSubview(view)
-//    }
-    
     func keyboardOn() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func keyboardWillShow(notification:NSNotification) {
-        adjustingHeight(true, notification: notification)
+        adjustingFrameHeight(true, notification: notification)
     }
     
     func keyboardWillHide(notification:NSNotification) {
-        adjustingHeight(false, notification: notification)
+        adjustingFrameHeight(false, notification: notification)
     }
     
-    func adjustingHeight(show:Bool, notification:NSNotification) {
+    func adjustingFrameHeight(show:Bool, notification:NSNotification) {
         assert(false, "need Override func to implement keyboardOn")
     }
 }

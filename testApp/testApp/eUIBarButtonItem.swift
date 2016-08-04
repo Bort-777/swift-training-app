@@ -9,8 +9,8 @@
 import UIKit
 
 extension UIBarButtonItem {
-    func applyDefaultStyles() {
-        setBackButtonBackgroundImage(UIImage(named: "backButton"), forState: .Normal, barMetrics: .Default)
-        setBackgroundImage(UIImage(named: "rightItem"), forState: .Normal, barMetrics: .Default)
+    static func applyDefaultStyles() {
+        appearance().setBackButtonBackgroundImage(UIImage(named: "backButton"), forState: .Normal, barMetrics: .Default)
+        appearance().setBackgroundImage(UIImage(named: "rightItem"), forState: .Normal, barMetrics: .Default)
     }
 }

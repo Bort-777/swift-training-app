@@ -9,9 +9,10 @@
 import UIKit
 
 extension UINavigationBar {
-    func applyDefaultStyles() {
-        setBackgroundImage(UIImage(named: "bottomBar"), forBarPosition: .Any, barMetrics: .Default)
-        titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        tintColor = UIColor.whiteColor()
+    static func applyDefaultStyles() {
+        appearance().clipsToBounds = true
+        appearance().setBackgroundImage(UIImage(named: "bottomBar"), forBarPosition: .Any, barMetrics: .Default)
+        appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        appearance().tintColor = UIColor.whiteColor()
     }
 }

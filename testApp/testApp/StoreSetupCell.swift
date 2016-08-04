@@ -19,16 +19,27 @@ class StoreSetupCell: UITableViewCell {
     @IBOutlet private weak var swichView: UISwitch!
     @IBOutlet private weak var arrowView: UIImageView!
     
+    @IBOutlet weak var topTitleConstraint: NSLayoutConstraint!
+    @IBOutlet weak var subtiteCostraint: NSLayoutConstraint!
+    @IBOutlet weak var titleConstraint: NSLayoutConstraint!
     var item: StoreSetupItem? {
         didSet {
             mode = item!.type
             titleLabel.text = item!.title
-            subtitleLabel.text = item!.subtitle
+            if let subtitle = item!.subtitle {
+                subtitleLabel.text = subtitle
+            }
+            else {
+                subtitleLabel.text = nil
+                topTitleConstraint.active = false
+            }
             if let imageName = item!.imageName {
                 iconView.image = UIImage(named: imageName)
             }
             else {
                 iconView.image = nil
+                titleConstraint.active = false
+                subtiteCostraint.active = false
                 //titleLabel.frame = CGRect(x: iconView.frame.minX, y: iconView.frame.minY, width: 0, height: 0)
             }
         }

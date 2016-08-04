@@ -10,11 +10,13 @@ import UIKit
 
 class StoreSetupController: BaseController {
     
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
+// MARK: - UITableViewDelegate
 extension StoreSetupController : UITableViewDelegate {
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -22,6 +24,7 @@ extension StoreSetupController : UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension StoreSetupController : UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

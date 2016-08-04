@@ -9,14 +9,10 @@
 import UIKit
 
 class MenuController: BaseController {
-
-    // MARK: - Outlets
-    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configurationNavigationBar()
     }
     
     // MARK: - Actions
