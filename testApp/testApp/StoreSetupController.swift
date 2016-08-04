@@ -36,23 +36,6 @@ extension StoreSetupController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(StoreSetupCell.cellIdentifier, forIndexPath: indexPath) as! StoreSetupCell
         cell.item = StoreSetupItem(index: indexPath.row)
-        cell.backgroundView = configurationCellBackground(index: indexPath.row)
-    
         return cell
-    }
-    
-    func configurationCellBackground(index index: Int) -> UIImageView {
-        let backgroundImage: UIImage?
-        
-        switch index {
-        case 0:
-            backgroundImage = UIImage(named: "cellTop")
-        case StoreSetup.count - 1:
-            backgroundImage = UIImage(named: "cellBottom")
-        default:
-            backgroundImage = UIImage(named: "cellMiddleBottom")
-        }
-        
-        return UIImageView(image: backgroundImage)
     }
 }

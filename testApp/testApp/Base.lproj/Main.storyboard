@@ -131,12 +131,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="426"/>
+            <point key="canvasLocation" x="246" y="426"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x26-K3-jQQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="myn-6H-86b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bJq-L9-M2m" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -149,6 +148,7 @@
                         <segue destination="QL5-lW-0tv" kind="relationship" relationship="rootViewController" id="wwf-XJ-oWW"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myn-6H-86b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="834" y="426"/>
         </scene>
@@ -217,7 +217,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="QSV-fZ-bkW">
-                        <barButtonItem key="leftBarButtonItem" title="Log out" id="Ex5-Lw-GSY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="Ex5-Lw-GSY">
+                            <connections>
+                                <action selector="logOutAction:" destination="QL5-lW-0tv" id="SgR-sL-6H2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>

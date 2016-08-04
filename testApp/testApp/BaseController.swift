@@ -31,17 +31,13 @@ class BaseController: UIViewController {
     
     func configurationNavigationBar() {
         
-        UINavigationBar.appearance().backgroundColor = UIColor.blackColor()
         UINavigationBar.appearance().clipsToBounds = true
-        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "bottomBar"), forBarPosition: UIBarPosition.Any, barMetrics: UIBarMetrics.Default)
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "bottomBar"), forBarPosition: .Any, barMetrics: .Default)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         
-        navigationItem.leftBarButtonItem?.setBackgroundImage(UIImage(named: "rightItem"), forState: .Normal, barMetrics: .Default)
-        navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
-        
-        // TODO;- fix
-        navigationItem.backBarButtonItem?.setBackgroundImage(UIImage(named: "backButton"), forState: .Normal, barMetrics: .Default)
-        navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(UIImage(named: "backButton"), forState: .Normal, barMetrics: .Default)
+        UIBarButtonItem.appearance().setBackgroundImage(UIImage(named: "rightItem"), forState: .Normal, barMetrics: .Default)
         
         configurationStatusBar()
     }

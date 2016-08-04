@@ -16,6 +16,9 @@ class MenuController: BaseController {
         super.viewDidLoad()
         configurationNavigationBar()
     }
+    @IBAction func logOutAction(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
 }
 
 extension MenuController: UITableViewDataSource {

@@ -31,6 +31,7 @@ class StoreSetupCell: UITableViewCell {
                 iconView.image = nil
                 //titleLabel.frame = CGRect(x: iconView.frame.minX, y: iconView.frame.minY, width: 0, height: 0)
             }
+            backgroundView = UIImageView(image: UIImage(named: item!.imageBackgroundName))
         }
     }
     
