@@ -18,16 +18,7 @@ enum Menu: Int {
         while let _ = Menu(rawValue: max) { max += 1 }
         return max
     }()
-    
-//    static func menuSegue(item item: Menu) -> String? {
-//        switch item {
-//        case .storeSetup:
-//            return Constant.sStoreSetup
-//        default:
-//            return nil
-//        }
-//    }
-   }
+}
 
 class MenuItem {
     

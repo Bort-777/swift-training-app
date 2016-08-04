@@ -12,7 +12,6 @@ class BaseController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configurationBackground()
     }
     
 //    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

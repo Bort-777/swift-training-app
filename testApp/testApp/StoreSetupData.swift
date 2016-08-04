@@ -37,7 +37,6 @@ class StoreSetupItem {
     var title: String
     var subtitle: String?
     var imageName: String?
-    var imageBackgroundName: String
     
     init(index: Int) {
         item = StoreSetup(rawValue: index)!
@@ -79,19 +78,5 @@ class StoreSetupItem {
             title = "Restore"
             type = .defaultType
         }
-        
-//        switch item.hashValue {
-//        case 0:
-//            if StoreSetup.count == 1 {
-//                imageBackgroundName = "cellMiddleBottom"
-//            }
-//            else {
-//                imageBackgroundName = "cellTop"
-//            }
-//        case StoreSetup.count - 1:
-//            imageBackgroundName = "cellBottom"
-//        default:
-//            imageBackgroundName = "cellMiddleBottom"
-//        }
     }
 }

@@ -12,12 +12,7 @@ class StoreSetupController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configurationNavigationBar()
     }
-    
-//    override func viewDidAppear(animated: Bool) {
-//        configurationNavigationBar()
-//    }
 }
 
 extension StoreSetupController : UITableViewDelegate {
@@ -37,7 +32,7 @@ extension StoreSetupController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(StoreSetupCell.cellIdentifier, forIndexPath: indexPath) as! StoreSetupCell
         cell.item = StoreSetupItem(index: indexPath.row)
-        //cell.background = // extenstion UITableView
+        cell.backgroundView = tableView.applyCustomBackgroundView(indexPath.row)
         return cell
     }
 }

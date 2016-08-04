@@ -15,8 +15,6 @@ class LogInController: BaseController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var logInButton: UIButton!
     
-//    private var keyboardActive = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboardOn()

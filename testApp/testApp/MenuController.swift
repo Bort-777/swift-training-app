@@ -45,8 +45,9 @@ extension MenuController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        if Menu.menuSegue(item: Menu(rawValue: indexPath.row)!) != nil {
-            self.performSegueWithIdentifier(Menu.menuSegue(item: Menu(rawValue: indexPath.row)!)!, sender: self)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! MenuCell
+        if let segue = cell.item!.menuSegue {
+            self.performSegueWithIdentifier(segue, sender: self)
         }
     }
 }

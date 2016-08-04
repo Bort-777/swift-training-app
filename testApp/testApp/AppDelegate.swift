@@ -15,22 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        applyDefaultStyles()
         
+        applyDefaultStyles()
         return true
     }
 
     func applyDefaultStyles() {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        
-        // extension
-        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "bottomBar"), forBarPosition: .Any, barMetrics: .Default)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        
-        UIBarButtonItem.appearance().setBackButtonBackgroundImage(UIImage(named: "backButton"), forState: .Normal, barMetrics: .Default)
-        UIBarButtonItem.appearance().setBackgroundImage(UIImage(named: "rightItem"), forState: .Normal, barMetrics: .Default)
+        UINavigationBar.appearance().applyDefaultStyles()
+        UIBarButtonItem.appearance().applyDefaultStyles()
     }
     
     func applicationWillResignActive(application: UIApplication) {
