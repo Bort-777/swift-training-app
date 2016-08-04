@@ -19,14 +19,14 @@ enum Menu: Int {
         return max
     }()
     
-    static func menuSegue(item item: Menu) -> String? {
-        switch item {
-        case .storeSetup:
-            return Constant.sStoreSetup
-        default:
-            return nil
-        }
-    }
+//    static func menuSegue(item item: Menu) -> String? {
+//        switch item {
+//        case .storeSetup:
+//            return Constant.sStoreSetup
+//        default:
+//            return nil
+//        }
+//    }
    }
 
 class MenuItem {
@@ -34,6 +34,7 @@ class MenuItem {
     var item: Menu
     var menuTitle: String
     var menuImage: String
+    var menuSegue: String?
     
     init(index: Int) {
         item = Menu(rawValue: index)!
@@ -47,6 +48,7 @@ class MenuItem {
         case .storeSetup:
             menuTitle = "Store Setup"
             menuImage = "storeLogo"
+            menuSegue = Constant.sStoreSetup
         }
     }
 }

@@ -54,23 +54,23 @@ class StoreSetupItem {
             type = .arrowType
             imageName = "vendors"
             
-        case  .taxes:
+        case .taxes:
             title = "Taxes"
             subtitle = "Vendors"
             type = .arrowType
             imageName = "taxes"
             
-        case  .costTracking:
+        case .costTracking:
             title = "Cost Tracking"
             type = .switchType
             imageName = "cost"
             
-        case  .lookDescriptions:
+        case .lookDescriptions:
             title = "Look Descriptions"
             type = .switchType
             imageName = "lookup"
             
-        case  .clearInventory:
+        case .clearInventory:
             title = "Clear Inventory"
             subtitle = "Vendors"
             type = .defaultType
@@ -80,18 +80,18 @@ class StoreSetupItem {
             type = .defaultType
         }
         
-        switch item.hashValue {
-        case 0:
-            if StoreSetup.count == 1 {
-                imageBackgroundName = "cellMiddleBottom"
-            }
-            else {
-                imageBackgroundName = "cellTop"
-            }
-        case StoreSetup.count - 1:
-            imageBackgroundName = "cellBottom"
-        default:
-            imageBackgroundName = "cellMiddleBottom"
-        }
+//        switch item.hashValue {
+//        case 0:
+//            if StoreSetup.count == 1 {
+//                imageBackgroundName = "cellMiddleBottom"
+//            }
+//            else {
+//                imageBackgroundName = "cellTop"
+//            }
+//        case StoreSetup.count - 1:
+//            imageBackgroundName = "cellBottom"
+//        default:
+//            imageBackgroundName = "cellMiddleBottom"
+//        }
     }
 }

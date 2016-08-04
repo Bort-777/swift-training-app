@@ -15,7 +15,7 @@ class LogInController: BaseController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var logInButton: UIButton!
     
-    private var keyboardActive = false
+//    private var keyboardActive = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class LogInController: BaseController {
         })
     }
     
-    @IBAction func touchLogIn(sender: AnyObject) {
+    @IBAction func touchLogIn() {
         self.performSegueWithIdentifier(Constant.sLogIn, sender: self)
     }
 }
@@ -46,7 +46,7 @@ extension LogInController: UITextFieldDelegate {
             passwordField.becomeFirstResponder()
         case passwordField:
             textField.resignFirstResponder()
-            touchLogIn(logInButton)
+            touchLogIn()
         default:
             textField.resignFirstResponder()
         }

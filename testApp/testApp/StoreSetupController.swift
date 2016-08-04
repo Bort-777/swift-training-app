@@ -12,17 +12,18 @@ class StoreSetupController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configurationNavigationBar()
+//        configurationNavigationBar()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        configurationNavigationBar()
-    }
+//    override func viewDidAppear(animated: Bool) {
+//        configurationNavigationBar()
+//    }
 }
+
 extension StoreSetupController : UITableViewDelegate {
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 250
+        return 56
     }
 }
 
@@ -36,6 +37,7 @@ extension StoreSetupController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(StoreSetupCell.cellIdentifier, forIndexPath: indexPath) as! StoreSetupCell
         cell.item = StoreSetupItem(index: indexPath.row)
+        //cell.background = // extenstion UITableView
         return cell
     }
 }

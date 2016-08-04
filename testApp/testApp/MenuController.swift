@@ -10,17 +10,22 @@ import UIKit
 
 class MenuController: BaseController {
 
+    // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
-        configurationNavigationBar()
+//        configurationNavigationBar()
     }
+    
+    // MARK: - Actions
     @IBAction func logOutAction(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil);
     }
 }
 
+// MARK: - UITableViewDataSource
 extension MenuController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,11 +36,11 @@ extension MenuController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(MenuCell.cellIdentifier, forIndexPath: indexPath) as! MenuCell
         cell.item = MenuItem(index: indexPath.row)
-        
         return cell
     }
 }
 
+// MARK: - UITableViewDelegate
 extension MenuController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

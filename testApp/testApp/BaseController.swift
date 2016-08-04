@@ -12,41 +12,32 @@ class BaseController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configurationBackground()
+//        configurationBackground()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
     
     private func configurationBackground() {
-        
-        let backgroundView = UIImageView(frame: self.view.frame);
+        let backgroundView = UIImageView(frame: self.view.frame)
         backgroundView.contentMode = .ScaleAspectFill
-        let background = UIImage(named: "viewBgr");
+        backgroundView.image = UIImage(named: "viewBgr")
+        self.view.insertSubview(backgroundView, atIndex: 0)
+    }
+    
+//    func configurationNavigationBar() {
+    
 
-        backgroundView.image = background;
-        self.view.insertSubview(backgroundView, atIndex: 0);
-    }
+        
+//        configurationStatusBar()
+//    }
     
-    func configurationNavigationBar() {
-        
-        UINavigationBar.appearance().clipsToBounds = true
-        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "bottomBar"), forBarPosition: .Any, barMetrics: .Default)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        
-        UIBarButtonItem.appearance().setBackButtonBackgroundImage(UIImage(named: "backButton"), forState: .Normal, barMetrics: .Default)
-        UIBarButtonItem.appearance().setBackgroundImage(UIImage(named: "rightItem"), forState: .Normal, barMetrics: .Default)
-        
-        configurationStatusBar()
-    }
-    
-    private func configurationStatusBar() {
-        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
-        view.backgroundColor = UIColor.blackColor()
-        self.view.addSubview(view)
-    }
+//    private func configurationStatusBar() {
+//        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
+//        view.backgroundColor = UIColor.blackColor()
+//        self.view.addSubview(view)
+//    }
     
     func keyboardOn() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
@@ -62,5 +53,6 @@ class BaseController: UIViewController {
     }
     
     func adjustingHeight(show:Bool, notification:NSNotification) {
+        assert(false, "need Override func to implement keyboardOn")
     }
 }
