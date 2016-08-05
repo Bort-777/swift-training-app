@@ -16,11 +16,14 @@ class DepartmentController: BaseController {
     @IBOutlet weak var tableView: UITableView!
     
     var department: [Department] = []
-    var departmentData: [DepartmentModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAllDepartments()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -34,9 +37,6 @@ class DepartmentController: BaseController {
     }
     
     func fetchAllDepartments() {
-//        let departmentE = Department.MR_createEntity()! as Department
-//        departmentE.name = "555"
-//        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         
         if let departmentNew = Department.MR_findAll() as? [Department] {
             department.appendContentsOf(departmentNew)
@@ -46,21 +46,15 @@ class DepartmentController: BaseController {
 //        RequestManager.requestDepartaments(
 //            success: { result in
 //                for dataJSON in result {
-//                    self.departmentData.append(DepartmentModel(json: dataJSON))
-//
-//                    //let departmentE = Department.MR_createEntity()! as Department
-//                    //departmentE.initData(dataJSON)
-//                    //NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+//                    let departmentE = Department.MR_createEntity()! as Department
+//                    departmentE.initData(dataJSON)
+//                    NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
 //                }
 //                self.tableView.reloadData()
 //            },
 //            failed: {error in
 //                self.presentErrorAlertController(error)
 //        })
-    }
-    
-    func saveContext() {
-        //NSManagedObjectContext.defaultContext().saveToPersistentStoreAndWait()
     }
 }
 

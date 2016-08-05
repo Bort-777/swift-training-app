@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MagicalRecord
+
 
 class EditDepartmentCell: BaseTableCell {
     static let cellIdentifier = String(EditDepartmentCell)
@@ -23,6 +25,9 @@ class EditDepartmentCell: BaseTableCell {
             mode = item!.type
             titleLabel.text = item!.title
             subtitleLabel.text = item!.subtitle
+            
+            item?.department.name = "Edited"
+            NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }
     }
     

@@ -52,10 +52,10 @@ class EditDepartmentItem {
             type = .switchType
         case .taxes:
             title = "Applied Taxes"
-//            for taxe in department.taxes {
-//                print(subtitle)
-//                subtitle = subtitle + taxe.name + " "
-//            }
+            for taxe in department.taxes {
+                print(subtitle)
+                subtitle = subtitle + taxe.name + " "
+            }
             type = .arrowType
         case .items:
             title = "Applied Item"

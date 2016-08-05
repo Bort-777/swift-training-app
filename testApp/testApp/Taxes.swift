@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import CoreData
 import SwiftyJSON
 
-class Taxes {
-    var name: String
+@objc(Taxe)
+class Taxe: NSManagedObject {
+    
+    // Attributes
+    @NSManaged var name: String
+    @NSManaged var department: Department
 
-    init(json: JSON) {
+    // Init
+    func initData(json: JSON) {
         name = json["name"].stringValue
     }
 }

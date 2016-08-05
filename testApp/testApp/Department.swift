@@ -15,9 +15,16 @@ class Department: NSManagedObject {
     
     // Attributes
     @NSManaged var name: String
+    @NSManaged var taxes: Set<Taxe>
     
+    // Init
     func initData(json: JSON) {
         name = json["name"].stringValue
-        print(json)
+        for taxe in json["taxes"].arrayValue {
+            let tempTaxe = Taxe.MR_createEntity()! as Taxe
+            tempTaxe.initData(taxe)
+            taxes.insert(tempTaxe)
+        }
+        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
     }
 }
