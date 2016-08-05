@@ -12,6 +12,14 @@ class DepartmentCell: BaseTableCell {
     
     static let cellIdentifier = String(DepartmentCell)
 
+    @IBOutlet weak var title: UILabel!
+    
+    var item: Department? {
+        didSet {
+            title.text = item!.name
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

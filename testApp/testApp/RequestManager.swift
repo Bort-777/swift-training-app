@@ -10,38 +10,37 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-enum RequestStatus: Int {
-    case unauthorized = 401
-    case found = 302
-}
-
-struct Answer {
-    var status = RequestStatus.found
-    var item: JSON?
+enum ErrorType {
+    case badReques, badResponse, badData
 }
 
 class RequestManager {
-    let headers: [String:String] = ["X-Access-Token1": Constant.kUserToken]
-    var answer: Answer?
+    static let headers: [String:String] = ["X-Access-Token": Constant.kUserToken]
     
-    func requestDepartaments() {
+    static func requestDepartaments(success: (answerJSONs: [JSON]) -> Void, failed: (ErrorType) -> Void) {
  
         let url = Constant.kApiUrl + Constant.kApiPrefix + Constant.kApiDepartments
         
-        Alamofire.request(.GET, url, parameters: nil, headers: headers).responseJSON {
-            _, _, result in
-            if result.isFailure {
-                
+        Alamofire.request(.GET, url, parameters: nil, headers: headers)
+            .validate()
+            .responseJSON {
+            response in
+            if response.result.isFailure {
+                failed(ErrorType.badReques)
+                return
             }
             
-            if let jsonObject: AnyObject = result.value {
+            if let jsonObject: AnyObject = response.result.value {
                 let json = JSON(jsonObject)
-                if let jsonStatus = json["status"].int {
-                    self.answer = Answer(status: RequestStatus(rawValue: jsonStatus)!, item: nil)
+                if let jsonArray = json.array {
+                    success(answerJSONs: jsonArray)
                 }
                 else {
-                    self.answer = Answer(status: RequestStatus.found, item: json)
+                    failed(ErrorType.badData)
                 }
+            }
+            else {
+                failed(ErrorType.badResponse)
             }
         }
     }

@@ -335,17 +335,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQ7-I2-fhf">
-                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="8" y="13" width="45" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="QQ7-I2-fhf" firstAttribute="centerY" secondItem="CwB-XR-5U8" secondAttribute="centerY" id="AzX-QN-zA4"/>
-                                                <constraint firstItem="QQ7-I2-fhf" firstAttribute="leading" secondItem="CwB-XR-5U8" secondAttribute="leadingMargin" id="jK3-L3-et6"/>
+                                                <constraint firstItem="QQ7-I2-fhf" firstAttribute="top" secondItem="CwB-XR-5U8" secondAttribute="topMargin" constant="5" id="TgK-sx-btS"/>
+                                                <constraint firstItem="QQ7-I2-fhf" firstAttribute="centerY" secondItem="CwB-XR-5U8" secondAttribute="centerY" id="bkl-Dw-ZoG"/>
+                                                <constraint firstItem="QQ7-I2-fhf" firstAttribute="leading" secondItem="CwB-XR-5U8" secondAttribute="leadingMargin" id="f3C-MF-LVc"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="QQ7-I2-fhf" id="pbj-uO-Wzf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

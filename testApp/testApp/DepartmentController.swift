@@ -14,58 +14,50 @@ class DepartmentController: BaseController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var answer = Answer() {
-        didSet {
-            json = answer.item
-            tableView.reloadData()
-        }
-    }
-    
-    var json: JSON?
+    var tableData: [Department] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //RequestManager().requestDepartaments()
-        requestDepartaments()
+        RequestManager.requestDepartaments(success, failed: failed)
     }
     
-    func requestDepartaments() {
-        let headers: [String:String] = ["X-Access-Token": Constant.kUserToken]
-        
-        let url = Constant.kApiUrl + Constant.kApiPrefix + Constant.kApiDepartments
-        
-        Alamofire.request(.GET, url, parameters: nil, headers: headers).responseJSON {
-            _, _, result in
-            if result.isFailure {
-                
-            }
-            
-            if let jsonObject: AnyObject = result.value {
-                let json = JSON(jsonObject)
-                if let jsonStatus = json["status"].int {
-                    self.answer = Answer(status: RequestStatus(rawValue: jsonStatus)!, item: nil)
-                }
-                else {
-                    self.answer = Answer(status: RequestStatus.found, item: json)
-                }
-            }
+    func success(result: [JSON]) {
+        for dataJSON in result {
+            tableData.append(Department(json: dataJSON))
         }
+        tableView.reloadData()
     }
     
+    func failed(error: ErrorType) {
+        var title: String = ""
+        switch error {
+        case .badResponse:
+            title = "Try again"
+        case .badReques:
+            title = "Server is not available"
+        case .badData:
+            title = "Server is not available"
+        }
+        
+        let alertController = UIAlertController(title: "Error", message:
+            title, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 }
 
 extension DepartmentController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = json?.arrayValue.count {
-            return count
-        }
-        return 0
+        
+        return tableData.count
     }
         
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(DepartmentCell.cellIdentifier, forIndexPath: indexPath) as! DepartmentCell
         cell.cellPosition = tableView.tableCellPosition(at: indexPath)
+        cell.item = tableData[indexPath.row]
         return cell
     }
 }

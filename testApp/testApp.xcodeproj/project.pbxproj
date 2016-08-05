@@ -141,7 +141,6 @@
 				EA459E121D51E4C10051B3A7 /* BaseController.swift */,
 				EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */,
 				EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */,
-				EA3B84C31D53A1FA009AD578 /* RequestManager.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -152,6 +151,7 @@
 				EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */,
 				EA6C3C6A1D4F69DD00017721 /* Menu.swift */,
 				EA3B84C51D53B348009AD578 /* Department.swift */,
+				EA3B84C31D53A1FA009AD578 /* RequestManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";

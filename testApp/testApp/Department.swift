@@ -10,9 +10,10 @@ import Foundation
 import SwiftyJSON
 
 class Department {
-    var title: String
+    var name: String
     
     init(json: JSON) {
-        title = json["id"].stringValue
+        name = json["name"].stringValue
+        print(name)
     }
 }

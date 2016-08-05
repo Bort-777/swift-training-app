@@ -1,24 +1,26 @@
-// UploadTests.swift
 //
-// Copyright (c) 2014–2015 Alamofire Software Foundation (http://alamofire.org/)
+//  UploadTests.swift
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
 //
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
 
 import Alamofire
 import Foundation
@@ -148,7 +150,7 @@ class UploadDataTestCase: BaseTestCase {
 
         var request: NSURLRequest?
         var response: NSHTTPURLResponse?
-        var error: ErrorType?
+        var error: NSError?
 
         // When
         Alamofire.upload(.POST, URLString, data: data)
@@ -160,7 +162,7 @@ class UploadDataTestCase: BaseTestCase {
                 expectation.fulfill()
             }
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(request, "request should not be nil")
@@ -210,7 +212,7 @@ class UploadDataTestCase: BaseTestCase {
             expectation.fulfill()
         }
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(responseRequest, "response request should not be nil")
@@ -275,7 +277,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
         var request: NSURLRequest?
         var response: NSHTTPURLResponse?
         var data: NSData?
-        var error: ErrorType?
+        var error: NSError?
 
         // When
         Alamofire.upload(
@@ -302,7 +304,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
             }
         )
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(request, "request should not be nil")
@@ -332,7 +334,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
         var request: NSURLRequest?
         var response: NSHTTPURLResponse?
         var data: NSData?
-        var error: ErrorType?
+        var error: NSError?
 
         // When
         Alamofire.upload(
@@ -359,7 +361,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
             }
         )
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(request, "request should not be nil")
@@ -410,7 +412,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
             }
         )
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(streamingFromDisk, "streaming from disk should not be nil")
@@ -455,7 +457,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
             }
         )
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(streamingFromDisk, "streaming from disk should not be nil")
@@ -510,7 +512,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
             }
         )
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(streamingFromDisk, "streaming from disk should not be nil")
@@ -563,7 +565,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
             }
         )
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(streamingFromDisk, "streaming from disk should not be nil")
@@ -601,7 +603,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
         var request: NSURLRequest?
         var response: NSHTTPURLResponse?
         var data: NSData?
-        var error: ErrorType?
+        var error: NSError?
         var streamingFromDisk: Bool?
 
         // When
@@ -631,7 +633,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
             }
         )
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(request, "request should not be nil")
@@ -675,7 +677,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
         var request: NSURLRequest?
         var response: NSHTTPURLResponse?
         var data: NSData?
-        var error: ErrorType?
+        var error: NSError?
 
         // When
         Alamofire.upload(
@@ -717,7 +719,7 @@ class UploadMultipartFormDataTestCase: BaseTestCase {
             }
         )
 
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
 
         // Then
         XCTAssertNotNil(request, "request should not be nil")
