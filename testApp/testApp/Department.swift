@@ -14,6 +14,5 @@ class Department {
     
     init(json: JSON) {
         name = json["name"].stringValue
-        print(name)
     }
 }
