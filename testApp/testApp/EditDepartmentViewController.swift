@@ -11,6 +11,7 @@ import UIKit
 class EditDepartmentViewController: BaseController {
     
     var departmentData: Department?
+    let heightRow = CGFloat(56)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class EditDepartmentViewController: BaseController {
 extension EditDepartmentViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 56
+        return heightRow
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

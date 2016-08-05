@@ -10,6 +10,8 @@ import UIKit
 
 class StoreSetupController: BaseController {
     
+    let heightRow = CGFloat(56)
+    
     // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,7 @@ class StoreSetupController: BaseController {
 extension StoreSetupController : UITableViewDelegate {
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 56
+        return heightRow
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
