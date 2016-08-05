@@ -17,7 +17,7 @@ enum ErrorType {
 class RequestManager {
     static let headers: [String:String] = ["X-Access-Token": Constant.kUserToken]
     
-    static func requestDepartaments(success: (answerJSONs: [JSON]) -> Void, failed: (ErrorType) -> Void) {
+    static func requestDepartaments(success success: (answerJSONs: [JSON]) -> Void, failed: (ErrorType) -> Void) {
  
         let url = Constant.kApiUrl + Constant.kApiPrefix + Constant.kApiDepartments
         

@@ -14,50 +14,54 @@ class DepartmentController: BaseController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var tableData: [Department] = []
+    var departmentData: [Department] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        RequestManager.requestDepartaments(success, failed: failed)
+        RequestManager.requestDepartaments(
+            success: { result in
+                for dataJSON in result {
+                    self.departmentData.append(Department(json: dataJSON))
+                }
+                self.tableView.reloadData()
+            },
+            failed: {error in
+                self.presentErrorAlertController(error)
+        })
     }
     
-    func success(result: [JSON]) {
-        for dataJSON in result {
-            tableData.append(Department(json: dataJSON))
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == Constant.sEditDepartment {
+            let indexPaths = self.tableView!.indexPathsForSelectedRows
+            let vc = segue.destinationViewController as! EditDepartmentViewController
+            
+            vc.departmentData = departmentData[indexPaths!.first!.row]
         }
-        tableView.reloadData()
-    }
-    
-    func failed(error: ErrorType) {
-        var title: String = ""
-        switch error {
-        case .badResponse:
-            title = "Try again"
-        case .badReques:
-            title = "Server is not available"
-        case .badData:
-            title = "Server is not available"
-        }
-        
-        let alertController = UIAlertController(title: "Error", message:
-            title, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.Default,handler: nil))
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
 
+// MARK: - UITableViewDataSource
 extension DepartmentController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return tableData.count
+        return departmentData.count
     }
         
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(DepartmentCell.cellIdentifier, forIndexPath: indexPath) as! DepartmentCell
         cell.cellPosition = tableView.tableCellPosition(at: indexPath)
-        cell.item = tableData[indexPath.row]
+        cell.item = departmentData[indexPath.row]
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension DepartmentController : UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+            self.performSegueWithIdentifier(Constant.sEditDepartment, sender: self)
     }
 }

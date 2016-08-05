@@ -27,9 +27,13 @@
 		EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C6A1D4F69DD00017721 /* Menu.swift */; };
 		EA6C3C6F1D4F71FB00017721 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */; };
 		EA6C3C791D4F72BA00017721 /* StoreSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */; };
-		EA6C3C7B1D4F795E00017721 /* StoreSetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */; };
+		EA6C3C7B1D4F795E00017721 /* StoreSetupItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7A1D4F795E00017721 /* StoreSetupItem.swift */; };
 		EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */; };
-		EA6C3C871D4FB4D600017721 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C861D4FB4D600017721 /* Constants.swift */; };
+		EA6C3C871D4FB4D600017721 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C861D4FB4D600017721 /* Constant.swift */; };
+		EADCE3B41D548123003D7AC8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCE3B31D548123003D7AC8 /* UIViewController+Alert.swift */; };
+		EADCE3B61D5483AB003D7AC8 /* EditDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCE3B51D5483AB003D7AC8 /* EditDepartmentViewController.swift */; };
+		EADCE3BD1D548878003D7AC8 /* EditDepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCE3BC1D548878003D7AC8 /* EditDepartmentCell.swift */; };
+		EADCE3BF1D548DA3003D7AC8 /* EditDepartmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCE3BE1D548DA3003D7AC8 /* EditDepartmentItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +59,13 @@
 		EA6C3C6A1D4F69DD00017721 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupController.swift; sourceTree = "<group>"; };
-		EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupData.swift; sourceTree = "<group>"; };
+		EA6C3C7A1D4F795E00017721 /* StoreSetupItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupItem.swift; sourceTree = "<group>"; };
 		EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupCell.swift; sourceTree = "<group>"; };
-		EA6C3C861D4FB4D600017721 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EA6C3C861D4FB4D600017721 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		EADCE3B31D548123003D7AC8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		EADCE3B51D5483AB003D7AC8 /* EditDepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDepartmentViewController.swift; sourceTree = "<group>"; };
+		EADCE3BC1D548878003D7AC8 /* EditDepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDepartmentCell.swift; sourceTree = "<group>"; };
+		EADCE3BE1D548DA3003D7AC8 /* EditDepartmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDepartmentItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +87,7 @@
 				EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */,
 				EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */,
 				EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */,
-				EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */,
+				EADCE3BB1D548839003D7AC8 /* DepartmentCell */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 				EA018D051D533E3600D134C2 /* UINavigationBar+Style.swift */,
 				EA018D071D533F4600D134C2 /* UIBarButtonItem+Style.swift */,
 				EA018D0A1D533FD800D134C2 /* UITableView+Style.swift */,
+				EADCE3B31D548123003D7AC8 /* UIViewController+Alert.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -137,10 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				EA19D1F51D50F4F1008E55FF /* LogInController.swift */,
-				EA6C3C641D4F665300017721 /* MenuController.swift */,
-				EA459E121D51E4C10051B3A7 /* BaseController.swift */,
-				EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */,
-				EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */,
+				EADCE3BA1D548469003D7AC8 /* NavigationTable */,
+				EADCE3B71D5483FB003D7AC8 /* DepartmentTable */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -148,10 +155,8 @@
 		EA6C3C681D4F695000017721 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA6C3C7A1D4F795E00017721 /* StoreSetupData.swift */,
-				EA6C3C6A1D4F69DD00017721 /* Menu.swift */,
-				EA3B84C51D53B348009AD578 /* Department.swift */,
-				EA3B84C31D53A1FA009AD578 /* RequestManager.swift */,
+				EADCE3B91D54841F003D7AC8 /* Entity */,
+				EADCE3B81D54840E003D7AC8 /* Network */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -163,9 +168,56 @@
 				EA6C3C521D4F530B00017721 /* Info.plist */,
 				EA6C3C4F1D4F530B00017721 /* LaunchScreen.storyboard */,
 				EA6C3C4D1D4F530B00017721 /* Assets.xcassets */,
-				EA6C3C861D4FB4D600017721 /* Constants.swift */,
+				EA6C3C861D4FB4D600017721 /* Constant.swift */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		EADCE3B71D5483FB003D7AC8 /* DepartmentTable */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */,
+				EADCE3B51D5483AB003D7AC8 /* EditDepartmentViewController.swift */,
+			);
+			name = DepartmentTable;
+			sourceTree = "<group>";
+		};
+		EADCE3B81D54840E003D7AC8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B84C31D53A1FA009AD578 /* RequestManager.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		EADCE3B91D54841F003D7AC8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EA6C3C7A1D4F795E00017721 /* StoreSetupItem.swift */,
+				EA6C3C6A1D4F69DD00017721 /* Menu.swift */,
+				EA3B84C51D53B348009AD578 /* Department.swift */,
+				EADCE3BE1D548DA3003D7AC8 /* EditDepartmentItem.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		EADCE3BA1D548469003D7AC8 /* NavigationTable */ = {
+			isa = PBXGroup;
+			children = (
+				EA6C3C641D4F665300017721 /* MenuController.swift */,
+				EA459E121D51E4C10051B3A7 /* BaseController.swift */,
+				EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */,
+			);
+			name = NavigationTable;
+			sourceTree = "<group>";
+		};
+		EADCE3BB1D548839003D7AC8 /* DepartmentCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */,
+				EADCE3BC1D548878003D7AC8 /* EditDepartmentCell.swift */,
+			);
+			name = DepartmentCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,17 +315,21 @@
 				EA3B84C41D53A1FA009AD578 /* RequestManager.swift in Sources */,
 				EA6C3C6F1D4F71FB00017721 /* MenuCell.swift in Sources */,
 				EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */,
+				EADCE3BD1D548878003D7AC8 /* EditDepartmentCell.swift in Sources */,
 				EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */,
 				EA3B84B81D538A0D009AD578 /* BaseTableCell.swift in Sources */,
 				EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */,
 				EA6C3C651D4F665300017721 /* MenuController.swift in Sources */,
 				EA018D081D533F4600D134C2 /* UIBarButtonItem+Style.swift in Sources */,
+				EADCE3B61D5483AB003D7AC8 /* EditDepartmentViewController.swift in Sources */,
 				EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */,
 				EA3B84C61D53B348009AD578 /* Department.swift in Sources */,
 				EA018D0B1D533FD800D134C2 /* UITableView+Style.swift in Sources */,
-				EA6C3C7B1D4F795E00017721 /* StoreSetupData.swift in Sources */,
-				EA6C3C871D4FB4D600017721 /* Constants.swift in Sources */,
+				EA6C3C7B1D4F795E00017721 /* StoreSetupItem.swift in Sources */,
+				EA6C3C871D4FB4D600017721 /* Constant.swift in Sources */,
 				EA3B84BC1D538BE4009AD578 /* DepartmentController.swift in Sources */,
+				EADCE3BF1D548DA3003D7AC8 /* EditDepartmentItem.swift in Sources */,
+				EADCE3B41D548123003D7AC8 /* UIViewController+Alert.swift in Sources */,
 				EA018D061D533E3600D134C2 /* UINavigationBar+Style.swift in Sources */,
 				EA459E131D51E4C10051B3A7 /* BaseController.swift in Sources */,
 			);
