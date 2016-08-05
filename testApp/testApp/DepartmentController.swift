@@ -43,18 +43,18 @@ class DepartmentController: BaseController {
         }
         tableView.reloadData()
         
-//        RequestManager.requestDepartaments(
-//            success: { result in
-//                for dataJSON in result {
-//                    let departmentE = Department.MR_createEntity()! as Department
-//                    departmentE.initData(dataJSON)
-//                    NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
-//                }
-//                self.tableView.reloadData()
-//            },
-//            failed: {error in
-//                self.presentErrorAlertController(error)
-//        })
+        RequestManager.requestDepartaments(
+            success: { result in
+                for dataJSON in result {
+                    let departmentE = Department.MR_createEntity()! as Department
+                    departmentE.initData(dataJSON)
+                    NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+                }
+                self.tableView.reloadData()
+            },
+            failed: {error in
+                self.presentErrorAlertController(error)
+        })
     }
 }
 

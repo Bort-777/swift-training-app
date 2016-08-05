@@ -26,5 +26,6 @@ class Department: NSManagedObject {
             taxes.insert(tempTaxe)
         }
         NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+        print(json)
     }
 }

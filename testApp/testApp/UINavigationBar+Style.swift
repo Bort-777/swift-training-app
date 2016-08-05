@@ -11,7 +11,7 @@ import UIKit
 extension UINavigationBar {
     static func applyDefaultStyles() {
         appearance().clipsToBounds = true
-        appearance().setBackgroundImage(UIImage(named: "bottomBar"), forBarPosition: .Any, barMetrics: .Default)
+        appearance().setBackgroundImage(UIImage(named: "navBar"), forBarPosition: .Any, barMetrics: .Default)
         appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         appearance().tintColor = UIColor.whiteColor()
     }
