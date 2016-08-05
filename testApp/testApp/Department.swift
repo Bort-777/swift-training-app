@@ -2,20 +2,22 @@
 //  Department.swift
 //  testApp
 //
-//  Created by Zbranevich, Andrey on 8/4/16.
+//  Created by Zbranevich, Andrey on 8/5/16.
 //  Copyright © 2016 Zbranevich, Andrey. All rights reserved.
 //
 
 import Foundation
+import CoreData
 import SwiftyJSON
 
-class Department {
-    var name: String
-    var appliedTaxes: String
-    var menuSegue: String?
+@objc(Department)
+class Department: NSManagedObject {
     
-    init(json: JSON) {
+    // Attributes
+    @NSManaged var name: String
+    
+    func initData(json: JSON) {
         name = json["name"].stringValue
-        appliedTaxes = json["taxes"][0]["name"].stringValue
+        print(json)
     }
 }

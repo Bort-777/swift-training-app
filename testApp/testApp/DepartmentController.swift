@@ -9,25 +9,18 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MagicalRecord
 
 class DepartmentController: BaseController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var departmentData: [Department] = []
+    var department: [Department] = []
+    var departmentData: [DepartmentModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        RequestManager.requestDepartaments(
-            success: { result in
-                for dataJSON in result {
-                    self.departmentData.append(Department(json: dataJSON))
-                }
-                self.tableView.reloadData()
-            },
-            failed: {error in
-                self.presentErrorAlertController(error)
-        })
+        fetchAllDepartments()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -36,8 +29,38 @@ class DepartmentController: BaseController {
             let indexPaths = self.tableView!.indexPathsForSelectedRows
             let vc = segue.destinationViewController as! EditDepartmentViewController
             
-            vc.departmentData = departmentData[indexPaths!.first!.row]
+            vc.departmentData = department[indexPaths!.first!.row]
         }
+    }
+    
+    func fetchAllDepartments() {
+//        let departmentE = Department.MR_createEntity()! as Department
+//        departmentE.name = "555"
+//        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+        
+        if let departmentNew = Department.MR_findAll() as? [Department] {
+            department.appendContentsOf(departmentNew)
+        }
+        tableView.reloadData()
+        
+//        RequestManager.requestDepartaments(
+//            success: { result in
+//                for dataJSON in result {
+//                    self.departmentData.append(DepartmentModel(json: dataJSON))
+//
+//                    //let departmentE = Department.MR_createEntity()! as Department
+//                    //departmentE.initData(dataJSON)
+//                    //NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+//                }
+//                self.tableView.reloadData()
+//            },
+//            failed: {error in
+//                self.presentErrorAlertController(error)
+//        })
+    }
+    
+    func saveContext() {
+        //NSManagedObjectContext.defaultContext().saveToPersistentStoreAndWait()
     }
 }
 
@@ -45,14 +68,14 @@ class DepartmentController: BaseController {
 extension DepartmentController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return departmentData.count
+        return department.count
     }
         
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(DepartmentCell.cellIdentifier, forIndexPath: indexPath) as! DepartmentCell
         cell.cellPosition = tableView.tableCellPosition(at: indexPath)
-        cell.item = departmentData[indexPath.row]
+        cell.item = department[indexPath.row]
         return cell
     }
 }

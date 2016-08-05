@@ -17,27 +17,12 @@ class EditDepartmentCell: BaseTableCell {
     @IBOutlet private weak var swichView: UISwitch!
     @IBOutlet private weak var arrowView: UIImageView!
     
-    var data: Department?
 
     var item: EditDepartmentItem? {
         didSet {
             mode = item!.type
             titleLabel.text = item!.title
-            
-            switch item!.item {
-            case .name:
-                subtitleLabel.text = data?.name
-            case .active:
-                subtitleLabel.text = ""
-            case .icon:
-                subtitleLabel.text = ""
-            case .itemEBT:
-                subtitleLabel.text = ""
-            case .taxes:
-                subtitleLabel.text = data?.appliedTaxes
-            case .items:
-                subtitleLabel.text = ""
-            }
+            subtitleLabel.text = item!.subtitle
         }
     }
     

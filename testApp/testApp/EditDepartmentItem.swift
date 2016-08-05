@@ -26,15 +26,20 @@ enum EditDepartment : Int {
 class EditDepartmentItem {
     
     var item: EditDepartment
+    var department: Department
     var type: EditDepartmentCellType
-    var title: String
+    var title: String?
+    var subtitle: String = ""
     var menuSegue: String?
     
-    init(index: Int) {
+    init(index: Int, department: Department) {
+        
+        self.department = department
         item = EditDepartment(rawValue: index)!
         switch item {
         case .name:
             title = "Name"
+            subtitle = department.name
             type = .arrowType
         case .active:
             title = "Active"
@@ -47,6 +52,10 @@ class EditDepartmentItem {
             type = .switchType
         case .taxes:
             title = "Applied Taxes"
+//            for taxe in department.taxes {
+//                print(subtitle)
+//                subtitle = subtitle + taxe.name + " "
+//            }
             type = .arrowType
         case .items:
             title = "Applied Item"

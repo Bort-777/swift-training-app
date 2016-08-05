@@ -43,8 +43,7 @@ extension EditDepartmentViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(EditDepartmentCell.cellIdentifier, forIndexPath: indexPath) as! EditDepartmentCell
-        cell.data = departmentData
-        cell.item = EditDepartmentItem(index: indexPath.row)
+        cell.item = EditDepartmentItem(index: indexPath.row, department: departmentData!)
         cell.cellPosition = tableView.tableCellPosition(at: indexPath)
         
         return cell
