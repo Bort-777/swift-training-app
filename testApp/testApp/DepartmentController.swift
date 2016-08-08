@@ -16,6 +16,7 @@ class DepartmentController: BaseController {
     @IBOutlet weak var tableView: UITableView!
     
     var department: [Department] = []
+    let heightRow = CGFloat(56)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,10 @@ extension DepartmentController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension DepartmentController : UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return heightRow
+    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         

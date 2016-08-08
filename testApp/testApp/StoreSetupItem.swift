@@ -32,6 +32,7 @@ enum StoreSetup : Int{
 
 class StoreSetupItem {
     
+    //MARK: - Property
     var item: StoreSetup
     var type: SetupCellType
     var title: String
@@ -39,6 +40,7 @@ class StoreSetupItem {
     var imageName: String?
     var menuSegue: String?
     
+    //MARK: - Init
     init(index: Int) {
         item = StoreSetup(rawValue: index)!
         switch item {

@@ -12,9 +12,22 @@ class EditDepartmentViewController: BaseController {
     
     var departmentData: Department?
     let heightRow = CGFloat(56)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func saveAction(sender: AnyObject) {
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == Constant.sTaxes {
+            
+            let vc = segue.destinationViewController as! EditTaxInDepController
+            vc.data = Array(departmentData!.taxes)
+        }
     }
 }
 
@@ -26,10 +39,10 @@ extension EditDepartmentViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        _ = tableView.cellForRowAtIndexPath(indexPath) as! EditDepartmentCell
-//        if let segue = cell.item!.menuSegue {
-//            //self.performSegueWithIdentifier(segue, sender: self)
-//        }
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! EditDepartmentCell
+        if let segue = cell.item!.menuSegue {
+            self.performSegueWithIdentifier(segue, sender: self)
+        }
     }
 }
 
@@ -66,5 +79,9 @@ extension EditDepartmentViewController: EditDepartmentCellDelegate {
         default:
             break
         }
+    }
+    
+    func didChangeTextField(sender: EditDepartmentCell, textData: String) {
+        departmentData?.name = textData
     }
 }

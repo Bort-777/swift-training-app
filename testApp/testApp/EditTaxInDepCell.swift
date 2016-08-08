@@ -8,6 +8,17 @@
 
 import UIKit
 
-class EditTaxInDepCell: BaseCell {
+class EditTaxInDepCell: BaseTableCell {
+
+    static let cellIdentifier = String(EditTaxInDepCell)
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    
+    var data: Taxe? {
+        didSet {
+            titleLabel.text = data?.name
+            selected = true
+        }
+    }
 
 }

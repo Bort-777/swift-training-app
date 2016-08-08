@@ -133,7 +133,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myn-6H-86b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="426"/>
+            <point key="canvasLocation" x="832" y="426"/>
         </scene>
         <!--Menu-->
         <scene sceneID="cPd-n0-ghm">
@@ -378,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9K-2d-XMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="758"/>
+            <point key="canvasLocation" x="2076" y="774"/>
         </scene>
         <!--Department-->
         <scene sceneID="AiL-5w-qD3">
@@ -444,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPK-M7-6bV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="107"/>
+            <point key="canvasLocation" x="2076" y="155"/>
         </scene>
         <!--Edit Department-->
         <scene sceneID="vTG-uQ-vNN">
@@ -482,7 +482,7 @@
                                                     <rect key="frame" x="263" y="10" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.070588235289999995" green="0.52549019610000003" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
-                                                        <action selector="switchAction:" destination="x6b-xX-BGu" eventType="valueChanged" id="SWa-4G-tMX"/>
+                                                        <action selector="didChangeSwitchState" destination="x6b-xX-BGu" eventType="valueChanged" id="9Sl-0v-agv"/>
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-gT-3sS">
@@ -501,6 +501,7 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
+                                                        <action selector="didChangeTextField" destination="x6b-xX-BGu" eventType="editingDidEnd" id="b9b-4U-IDi"/>
                                                         <outlet property="delegate" destination="nlD-Kd-2zW" id="nk1-Eo-tjn"/>
                                                     </connections>
                                                 </textField>
@@ -549,12 +550,81 @@
                             <constraint firstItem="2Ge-bP-7Oy" firstAttribute="leading" secondItem="OM0-e9-COJ" secondAttribute="leading" id="fJx-TP-MJN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Department" id="Sgf-FZ-7eZ"/>
+                    <navigationItem key="navigationItem" title="Edit Department" id="Sgf-FZ-7eZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Nyq-BE-R8M">
+                            <connections>
+                                <action selector="saveAction:" destination="nlD-Kd-2zW" id="We4-k8-mrK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="nGp-oT-aRR" kind="show" identifier="taxes" id="ATa-XC-PEN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85g-yu-J1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2478" y="107"/>
+            <point key="canvasLocation" x="2480" y="155"/>
+        </scene>
+        <!--Edit Tax In Dep Controller-->
+        <scene sceneID="aqc-ad-SgD">
+            <objects>
+                <viewController id="nGp-oT-aRR" customClass="EditTaxInDepController" customModule="testApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lcB-G3-efz"/>
+                        <viewControllerLayoutGuide type="bottom" id="M08-lu-Tps"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y88-tN-Ij5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="2" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rpm-MS-bwh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditTaxInDepCell" id="KKa-Cj-qKA" customClass="EditTaxInDepCell" customModule="testApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KKa-Cj-qKA" id="at4-m5-JRr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaM-KW-qd0">
+                                                    <rect key="frame" x="8" y="10" width="50" height="23"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MaM-KW-qd0" firstAttribute="leading" secondItem="at4-m5-JRr" secondAttribute="leadingMargin" id="Yni-lv-8Lf"/>
+                                                <constraint firstItem="MaM-KW-qd0" firstAttribute="centerY" secondItem="at4-m5-JRr" secondAttribute="centerY" id="j0s-UM-P1k"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="MaM-KW-qd0" id="Vt7-Q5-dnq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nGp-oT-aRR" id="pzf-vz-cb3"/>
+                                    <outlet property="delegate" destination="nGp-oT-aRR" id="lMf-WQ-7Q4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rpm-MS-bwh" secondAttribute="trailing" id="PfV-jy-YC0"/>
+                            <constraint firstItem="rpm-MS-bwh" firstAttribute="top" secondItem="lcB-G3-efz" secondAttribute="bottom" id="Usy-DX-P0U"/>
+                            <constraint firstItem="rpm-MS-bwh" firstAttribute="bottom" secondItem="M08-lu-Tps" secondAttribute="top" id="WgG-lS-LTN"/>
+                            <constraint firstItem="rpm-MS-bwh" firstAttribute="leading" secondItem="Y88-tN-Ij5" secondAttribute="leading" id="qCm-as-dwX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0d-hi-f2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2882" y="155"/>
         </scene>
     </scenes>
     <resources>

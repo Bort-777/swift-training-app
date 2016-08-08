@@ -7,5 +7,7 @@
 //
 
 protocol EditDepartmentCellDelegate: class {
+    
     func didChangeSwitchState(sender: EditDepartmentCell, isOn: Bool)
+    func didChangeTextField(sender: EditDepartmentCell, textData: String)
 }

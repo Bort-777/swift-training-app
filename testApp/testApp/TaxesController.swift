@@ -19,11 +19,11 @@ class TaxesController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchAllDepartments()
+        fetchAllTaxes()
     }
     
     override func viewDidAppear(animated: Bool) {
-        reloadDepartments()
+        fetchAllTaxes()
         tableView.reloadData()
     }
     
@@ -37,7 +37,7 @@ class TaxesController: BaseController {
         }
     }
     
-    func fetchAllDepartments() {
+    func fetchAllTaxes() {
         
         RequestManager.requestTaxes(
             success: { result in

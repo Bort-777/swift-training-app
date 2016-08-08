@@ -12,6 +12,8 @@
 		EA018D0B1D533FD800D134C2 /* UITableView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D0A1D533FD800D134C2 /* UITableView+Style.swift */; };
 		EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D1F51D50F4F1008E55FF /* LogInController.swift */; };
 		EA38DB1B1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38DB1A1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift */; };
+		EA38DB1D1D58D2E600E8AE6C /* EditTaxInDepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38DB1C1D58D2E600E8AE6C /* EditTaxInDepController.swift */; };
+		EA38DB1F1D58D38E00E8AE6C /* EditTaxInDepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38DB1E1D58D38E00E8AE6C /* EditTaxInDepCell.swift */; };
 		EA3B84B81D538A0D009AD578 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */; };
 		EA3B84BA1D538AF9009AD578 /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */; };
 		EA3B84BC1D538BE4009AD578 /* DepartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */; };
@@ -48,6 +50,8 @@
 		EA018D0A1D533FD800D134C2 /* UITableView+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Style.swift"; sourceTree = "<group>"; };
 		EA19D1F51D50F4F1008E55FF /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		EA38DB1A1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDepartmentCellDelegate.swift; sourceTree = "<group>"; };
+		EA38DB1C1D58D2E600E8AE6C /* EditTaxInDepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaxInDepController.swift; sourceTree = "<group>"; };
+		EA38DB1E1D58D38E00E8AE6C /* EditTaxInDepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaxInDepCell.swift; sourceTree = "<group>"; };
 		EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
 		EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentController.swift; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 			children = (
 				EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */,
 				EADCE3B51D5483AB003D7AC8 /* EditDepartmentViewController.swift */,
+				EA38DB1C1D58D2E600E8AE6C /* EditTaxInDepController.swift */,
 			);
 			name = DepartmentTable;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */,
 				EADCE3BC1D548878003D7AC8 /* EditDepartmentCell.swift */,
 				EA38DB1A1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift */,
+				EA38DB1E1D58D38E00E8AE6C /* EditTaxInDepCell.swift */,
 			);
 			name = DepartmentCell;
 			sourceTree = "<group>";
@@ -372,7 +378,9 @@
 				EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */,
 				EADCE3BD1D548878003D7AC8 /* EditDepartmentCell.swift in Sources */,
 				EA8E04C21D54AD0100BC4C21 /* Taxe.swift in Sources */,
+				EA38DB1F1D58D38E00E8AE6C /* EditTaxInDepCell.swift in Sources */,
 				EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */,
+				EA38DB1D1D58D2E600E8AE6C /* EditTaxInDepController.swift in Sources */,
 				EA3B84B81D538A0D009AD578 /* BaseTableCell.swift in Sources */,
 				EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */,
 				EA6C3C651D4F665300017721 /* MenuController.swift in Sources */,

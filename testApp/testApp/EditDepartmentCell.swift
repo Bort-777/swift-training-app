@@ -54,7 +54,11 @@ class EditDepartmentCell: BaseTableCell {
         }
     }
     
-    @IBAction func switchAction(sender: AnyObject) {
+    @IBAction func didChangeTextField() {
+        delegate?.didChangeTextField(self, textData: editView.text!)
+    }
+    
+    @IBAction func didChangeSwitchState() {
         delegate?.didChangeSwitchState(self, isOn: swichView.on)
     }
 }
