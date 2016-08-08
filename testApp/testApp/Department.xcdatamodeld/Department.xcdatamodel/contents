@@ -2,6 +2,11 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
     <entity name="Department" representedClassName="Department" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="departmentID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="taxes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Taxe" inverseName="department" inverseEntity="Taxe" syncable="YES"/>
     </entity>
@@ -10,7 +15,7 @@
         <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="taxes" inverseEntity="Department" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Department" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Department" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Taxe" positionX="160" positionY="-19" width="128" height="73"/>
     </elements>
 </model>

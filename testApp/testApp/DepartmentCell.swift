@@ -12,8 +12,10 @@ class DepartmentCell: BaseTableCell {
     
     static let cellIdentifier = String(DepartmentCell)
 
+    // MARK: - Outlets
     @IBOutlet weak var title: UILabel!
     
+    // MARK: - Data
     var item: Department? {
         didSet {
             title.text = item!.name

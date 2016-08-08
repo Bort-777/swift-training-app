@@ -53,7 +53,7 @@ class EditDepartmentItem {
         case .taxes:
             title = "Applied Taxes"
             for taxe in department.taxes {
-                print(subtitle)
+                // TODO -
                 subtitle = subtitle + taxe.name + " "
             }
             type = .arrowType

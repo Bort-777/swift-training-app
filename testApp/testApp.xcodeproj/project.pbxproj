@@ -113,8 +113,8 @@
 		EA6C3C3A1D4F530B00017721 = {
 			isa = PBXGroup;
 			children = (
-				EA8E04CE1D54D36E00BC4C21 /* MagicalRecord.framework */,
 				EA3B84BD1D539479009AD578 /* Alamofire.framework */,
+				EA8E04CE1D54D36E00BC4C21 /* MagicalRecord.framework */,
 				EA3B84BE1D539479009AD578 /* SwiftyJSON.framework */,
 				EA6C3C451D4F530B00017721 /* testApp */,
 				EA6C3C441D4F530B00017721 /* Products */,

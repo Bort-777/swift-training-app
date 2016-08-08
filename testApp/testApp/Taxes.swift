@@ -16,9 +16,4 @@ class Taxe: NSManagedObject {
     // Attributes
     @NSManaged var name: String
     @NSManaged var department: Department
-
-    // Init
-    func initData(json: JSON) {
-        name = json["name"].stringValue
-    }
 }
