@@ -80,6 +80,6 @@ extension TaxesController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        self.performSegueWithIdentifier(Constant.sEditDepartment, sender: self)
+        //self.performSegueWithIdentifier(Constant.sEditDepartment, sender: self)
     }
 }

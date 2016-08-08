@@ -29,6 +29,7 @@ class EditDepartmentItem {
     var type: EditDepartmentCellType
     var title: String?
     var subtitle: String = ""
+    var switchState = false
     var menuSegue: String?
     
     init(index: Int, department: Department) {
@@ -43,6 +44,7 @@ class EditDepartmentItem {
         case .active:
             title = "Active"
             type = .switchType
+            switchState = department.active
         case .icon:
             title = "Icon"
             type = .arrowType

@@ -15,8 +15,6 @@ class EditDepartmentViewController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 }
 
@@ -44,6 +42,7 @@ extension EditDepartmentViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(EditDepartmentCell.cellIdentifier, forIndexPath: indexPath) as! EditDepartmentCell
+        cell.delegate = self
         cell.item = EditDepartmentItem(index: indexPath.row, department: departmentData!)
         cell.cellPosition = tableView.tableCellPosition(at: indexPath)
         
@@ -56,5 +55,16 @@ extension EditDepartmentViewController: UITextFieldDelegate {
         departmentData?.name = textField.text!
         textField.resignFirstResponder()
         return true
+    }
+}
+
+extension EditDepartmentViewController: EditDepartmentCellDelegate {
+    func didChangeSwitchState(sender: EditDepartmentCell, isOn: Bool) {
+        switch sender.item!.item {
+        case .active:
+            departmentData?.active = isOn
+        default:
+            break
+        }
     }
 }

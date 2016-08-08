@@ -11,6 +11,7 @@
 		EA018D081D533F4600D134C2 /* UIBarButtonItem+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D071D533F4600D134C2 /* UIBarButtonItem+Style.swift */; };
 		EA018D0B1D533FD800D134C2 /* UITableView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018D0A1D533FD800D134C2 /* UITableView+Style.swift */; };
 		EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D1F51D50F4F1008E55FF /* LogInController.swift */; };
+		EA38DB1B1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38DB1A1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift */; };
 		EA3B84B81D538A0D009AD578 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */; };
 		EA3B84BA1D538AF9009AD578 /* DepartmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */; };
 		EA3B84BC1D538BE4009AD578 /* DepartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */; };
@@ -46,6 +47,7 @@
 		EA018D071D533F4600D134C2 /* UIBarButtonItem+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Style.swift"; sourceTree = "<group>"; };
 		EA018D0A1D533FD800D134C2 /* UITableView+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Style.swift"; sourceTree = "<group>"; };
 		EA19D1F51D50F4F1008E55FF /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		EA38DB1A1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDepartmentCellDelegate.swift; sourceTree = "<group>"; };
 		EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCell.swift; sourceTree = "<group>"; };
 		EA3B84BB1D538BE4009AD578 /* DepartmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentController.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				EA3B84B91D538AF9009AD578 /* DepartmentCell.swift */,
 				EADCE3BC1D548878003D7AC8 /* EditDepartmentCell.swift */,
+				EA38DB1A1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift */,
 			);
 			name = DepartmentCell;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				EA6C3C6B1D4F69DD00017721 /* Menu.swift in Sources */,
 				EA018D0B1D533FD800D134C2 /* UITableView+Style.swift in Sources */,
 				EA6C3C7B1D4F795E00017721 /* StoreSetupItem.swift in Sources */,
+				EA38DB1B1D58A54300E8AE6C /* EditDepartmentCellDelegate.swift in Sources */,
 				EA6C3C871D4FB4D600017721 /* Constant.swift in Sources */,
 				EA3B84BC1D538BE4009AD578 /* DepartmentController.swift in Sources */,
 				EA8E04C51D54B66100BC4C21 /* Department.xcdatamodeld in Sources */,

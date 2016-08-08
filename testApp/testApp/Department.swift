@@ -16,6 +16,6 @@ class Department: NSManagedObject {
     // Attributes
     @NSManaged var id: Int
     @NSManaged var name: String
-    @NSManaged var activ: Bool
+    @NSManaged var active: Bool
     @NSManaged var taxes: Set<Taxe>
 }

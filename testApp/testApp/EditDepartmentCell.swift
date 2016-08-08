@@ -22,6 +22,9 @@ class EditDepartmentCell: BaseTableCell {
     @IBOutlet private weak var swichView: UISwitch!
     @IBOutlet private weak var arrowView: UIImageView!
     
+    // MARK: - Delegate
+    weak var delegate: EditDepartmentCellDelegate?
+    
     // MARK: - Data
     var item: EditDepartmentItem? {
         didSet {
@@ -29,9 +32,7 @@ class EditDepartmentCell: BaseTableCell {
             titleLabel.text = item!.title
             subtitleLabel.text = item!.subtitle
             editView.text = item!.subtitle
-            
-            // TODO
-            item?.department.name = "Edited"
+            swichView.on = item!.switchState
         }
     }
     
@@ -51,6 +52,10 @@ class EditDepartmentCell: BaseTableCell {
                 subtitleLabel.hidden = true
             }
         }
+    }
+    
+    @IBAction func switchAction(sender: AnyObject) {
+        delegate?.didChangeSwitchState(self, isOn: swichView.on)
     }
 }
 
