@@ -12,10 +12,18 @@
     </entity>
     <entity name="Taxe" representedClassName="Taxe" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taxeID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
         <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="taxes" inverseEntity="Department" syncable="YES"/>
+        <userInfo>
+            <entry key="mappedKeyName" value="department.id"/>
+        </userInfo>
     </entity>
     <elements>
         <element name="Department" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Taxe" positionX="160" positionY="-19" width="128" height="73"/>
+        <element name="Taxe" positionX="160" positionY="-19" width="128" height="90"/>
     </elements>
 </model>

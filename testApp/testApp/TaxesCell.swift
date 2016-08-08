@@ -8,14 +8,17 @@
 
 import UIKit
 
-class taxesCell: BaseTableCell {
+class TaxesCell: BaseTableCell {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    static let cellIdentifier = String(TaxesCell)
+    
+    // MARK: - Outlets
+    @IBOutlet weak var title: UILabel!
+    
+    // MARK: - Data
+    var item: Taxe? {
+        didSet {
+            title.text = item!.name
+        }
     }
-    */
-
 }

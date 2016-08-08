@@ -50,3 +50,11 @@ extension EditDepartmentViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension EditDepartmentViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        departmentData?.name = textField.text!
+        textField.resignFirstResponder()
+        return true
+    }
+}

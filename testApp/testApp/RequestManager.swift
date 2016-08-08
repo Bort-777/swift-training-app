@@ -17,10 +17,8 @@ enum ErrorType {
 class RequestManager {
     static let headers: [String:String] = ["X-Access-Token": Constant.kUserToken]
     
-    static func requestDepartaments(success success: (answerJSONs: [JSON]) -> Void, failed: (ErrorType) -> Void) {
- 
-        let url = Constant.kApiUrl + Constant.kApiPrefix + Constant.kApiDepartments
-        
+    static func request(url url: String, success: (answerJSONs: [JSON]) -> Void, failed: (ErrorType) -> Void) {
+         
         Alamofire.request(.GET, url, parameters: nil, headers: headers)
             .validate()
             .responseJSON {
@@ -44,4 +42,15 @@ class RequestManager {
             }
         }
     }
+    
+    static func requestDepartaments(success success: (answerJSONs: [JSON]) -> Void, failed: (ErrorType) -> Void) {
+        let url = Constant.kApiUrl + Constant.kApiPrefix + Constant.kApiDepartments
+        request(url: url, success: success, failed: failed)
+    }
+    
+    static func requestTaxes(success success: (answerJSONs: [JSON]) -> Void, failed: (ErrorType) -> Void) {
+        let url = Constant.kApiUrl + Constant.kApiPrefix + Constant.kApiTaxes
+        request(url: url, success: success, failed: failed)
+    }
+    
 }

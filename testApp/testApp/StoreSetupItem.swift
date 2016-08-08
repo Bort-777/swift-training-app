@@ -53,14 +53,14 @@ class StoreSetupItem {
             subtitle = "12 items"
             type = .arrowType
             imageName = "vendors"
-            menuSegue = Constant.sDepartment
+            menuSegue = Constant.sDepartments
             
         case .taxes:
             title = "Taxes"
             subtitle = "Vendors"
             type = .arrowType
             imageName = "taxes"
-            
+            menuSegue = Constant.sTaxes
         case .costTracking:
             title = "Cost Tracking"
             type = .switchType

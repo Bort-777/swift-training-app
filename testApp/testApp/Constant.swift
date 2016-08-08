@@ -10,7 +10,8 @@ import Foundation
 
 enum Constant {
     static let sStoreSetup = "storeSetup"
-    static let sDepartment = "department"
+    static let sDepartments = "departments"
+    static let sTaxes = "taxes"
     static let sLogIn = "logIn"
     static let sEditDepartment = "editDepartment"
     
@@ -20,4 +21,6 @@ enum Constant {
     static let kApiUrl = "https://echo.harbortouch.com/"
     static let kApiPrefix = "api/v1/"
     static let kApiDepartments = "departments"
+    static let kApiTaxes = "taxes"
+    
 }

@@ -18,6 +18,7 @@ class EditDepartmentCell: BaseTableCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     
+    @IBOutlet private weak var editView: UITextField!
     @IBOutlet private weak var swichView: UISwitch!
     @IBOutlet private weak var arrowView: UIImageView!
     
@@ -27,6 +28,7 @@ class EditDepartmentCell: BaseTableCell {
             mode = item!.type
             titleLabel.text = item!.title
             subtitleLabel.text = item!.subtitle
+            editView.text = item!.subtitle
             
             // TODO
             item?.department.name = "Edited"
@@ -35,14 +37,20 @@ class EditDepartmentCell: BaseTableCell {
     
     var mode: EditDepartmentCellType? {
         didSet {
+            swichView.hidden = true
+            arrowView.hidden = true
+            editView.hidden = true
+            
             switch mode! {
             case .arrowType:
-                swichView.hidden = true
                 arrowView.hidden = false
             case .switchType:
                 swichView.hidden = false
-                arrowView.hidden = true
+            case .editType:
+                editView.hidden = false
+                subtitleLabel.hidden = true
             }
         }
     }
 }
+

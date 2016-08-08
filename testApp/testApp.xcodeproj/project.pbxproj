@@ -18,6 +18,8 @@
 		EA3B84C01D539479009AD578 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3B84BE1D539479009AD578 /* SwiftyJSON.framework */; };
 		EA3B84C41D53A1FA009AD578 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B84C31D53A1FA009AD578 /* RequestManager.swift */; };
 		EA459E131D51E4C10051B3A7 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA459E121D51E4C10051B3A7 /* BaseController.swift */; };
+		EA5CB9F21D588F28005DBF31 /* TaxesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5CB9F11D588F28005DBF31 /* TaxesController.swift */; };
+		EA5CB9F51D588FA1005DBF31 /* TaxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5CB9F41D588FA1005DBF31 /* TaxesCell.swift */; };
 		EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C461D4F530B00017721 /* AppDelegate.swift */; };
 		EA6C3C4C1D4F530B00017721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4A1D4F530B00017721 /* Main.storyboard */; };
 		EA6C3C4E1D4F530B00017721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6C3C4D1D4F530B00017721 /* Assets.xcassets */; };
@@ -29,7 +31,7 @@
 		EA6C3C7B1D4F795E00017721 /* StoreSetupItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7A1D4F795E00017721 /* StoreSetupItem.swift */; };
 		EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */; };
 		EA6C3C871D4FB4D600017721 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C3C861D4FB4D600017721 /* Constant.swift */; };
-		EA8E04C21D54AD0100BC4C21 /* Taxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E04C11D54AD0100BC4C21 /* Taxes.swift */; };
+		EA8E04C21D54AD0100BC4C21 /* Taxe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E04C11D54AD0100BC4C21 /* Taxe.swift */; };
 		EA8E04C51D54B66100BC4C21 /* Department.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA8E04C31D54B66100BC4C21 /* Department.xcdatamodeld */; };
 		EA8E04CD1D54C90A00BC4C21 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E04CC1D54C90A00BC4C21 /* Department.swift */; };
 		EA8E04CF1D54D36E00BC4C21 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E04CE1D54D36E00BC4C21 /* MagicalRecord.framework */; };
@@ -51,6 +53,8 @@
 		EA3B84BE1D539479009AD578 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		EA3B84C31D53A1FA009AD578 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		EA459E121D51E4C10051B3A7 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		EA5CB9F11D588F28005DBF31 /* TaxesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxesController.swift; sourceTree = "<group>"; };
+		EA5CB9F41D588FA1005DBF31 /* TaxesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxesCell.swift; sourceTree = "<group>"; };
 		EA6C3C431D4F530B00017721 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6C3C461D4F530B00017721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6C3C4B1D4F530B00017721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		EA6C3C7A1D4F795E00017721 /* StoreSetupItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupItem.swift; sourceTree = "<group>"; };
 		EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSetupCell.swift; sourceTree = "<group>"; };
 		EA6C3C861D4FB4D600017721 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		EA8E04C11D54AD0100BC4C21 /* Taxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxes.swift; sourceTree = "<group>"; };
+		EA8E04C11D54AD0100BC4C21 /* Taxe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxe.swift; sourceTree = "<group>"; };
 		EA8E04C41D54B66100BC4C21 /* Department.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Department.xcdatamodel; sourceTree = "<group>"; };
 		EA8E04CC1D54C90A00BC4C21 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		EA8E04CE1D54D36E00BC4C21 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/iOS/MagicalRecord.framework; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				EA3B84B71D538A0D009AD578 /* BaseTableCell.swift */,
 				EA6C3C6E1D4F71FB00017721 /* MenuCell.swift */,
 				EA6C3C7E1D4FAB1000017721 /* StoreSetupCell.swift */,
+				EA5CB9F31D588F82005DBF31 /* TaxesCell */,
 				EADCE3BB1D548839003D7AC8 /* DepartmentCell */,
 			);
 			name = Cell;
@@ -108,6 +113,22 @@
 				EADCE3B31D548123003D7AC8 /* UIViewController+Alert.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EA5CB9F01D588EEC005DBF31 /* TaxesTable */ = {
+			isa = PBXGroup;
+			children = (
+				EA5CB9F11D588F28005DBF31 /* TaxesController.swift */,
+			);
+			name = TaxesTable;
+			sourceTree = "<group>";
+		};
+		EA5CB9F31D588F82005DBF31 /* TaxesCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA5CB9F41D588FA1005DBF31 /* TaxesCell.swift */,
+			);
+			name = TaxesCell;
 			sourceTree = "<group>";
 		};
 		EA6C3C3A1D4F530B00017721 = {
@@ -155,7 +176,6 @@
 			children = (
 				EA19D1F51D50F4F1008E55FF /* LogInController.swift */,
 				EADCE3BA1D548469003D7AC8 /* NavigationTable */,
-				EADCE3B71D5483FB003D7AC8 /* DepartmentTable */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -185,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				EA8E04CC1D54C90A00BC4C21 /* Department.swift */,
-				EA8E04C11D54AD0100BC4C21 /* Taxes.swift */,
+				EA8E04C11D54AD0100BC4C21 /* Taxe.swift */,
 				EA8E04C31D54B66100BC4C21 /* Department.xcdatamodeld */,
 			);
 			name = Entity;
@@ -233,6 +253,8 @@
 				EA6C3C641D4F665300017721 /* MenuController.swift */,
 				EA459E121D51E4C10051B3A7 /* BaseController.swift */,
 				EA6C3C781D4F72BA00017721 /* StoreSetupController.swift */,
+				EA5CB9F01D588EEC005DBF31 /* TaxesTable */,
+				EADCE3B71D5483FB003D7AC8 /* DepartmentTable */,
 			);
 			name = NavigationTable;
 			sourceTree = "<group>";
@@ -340,12 +362,13 @@
 			files = (
 				EA3B84BA1D538AF9009AD578 /* DepartmentCell.swift in Sources */,
 				EA6C3C791D4F72BA00017721 /* StoreSetupController.swift in Sources */,
+				EA5CB9F21D588F28005DBF31 /* TaxesController.swift in Sources */,
 				EA8E04CD1D54C90A00BC4C21 /* Department.swift in Sources */,
 				EA3B84C41D53A1FA009AD578 /* RequestManager.swift in Sources */,
 				EA6C3C6F1D4F71FB00017721 /* MenuCell.swift in Sources */,
 				EA6C3C471D4F530B00017721 /* AppDelegate.swift in Sources */,
 				EADCE3BD1D548878003D7AC8 /* EditDepartmentCell.swift in Sources */,
-				EA8E04C21D54AD0100BC4C21 /* Taxes.swift in Sources */,
+				EA8E04C21D54AD0100BC4C21 /* Taxe.swift in Sources */,
 				EA6C3C7F1D4FAB1000017721 /* StoreSetupCell.swift in Sources */,
 				EA3B84B81D538A0D009AD578 /* BaseTableCell.swift in Sources */,
 				EA19D1F61D50F4F1008E55FF /* LogInController.swift in Sources */,
@@ -358,6 +381,7 @@
 				EA6C3C871D4FB4D600017721 /* Constant.swift in Sources */,
 				EA3B84BC1D538BE4009AD578 /* DepartmentController.swift in Sources */,
 				EA8E04C51D54B66100BC4C21 /* Department.xcdatamodeld in Sources */,
+				EA5CB9F51D588FA1005DBF31 /* TaxesCell.swift in Sources */,
 				EADCE3BF1D548DA3003D7AC8 /* EditDepartmentItem.swift in Sources */,
 				EADCE3B41D548123003D7AC8 /* UIViewController+Alert.swift in Sources */,
 				EA018D061D533E3600D134C2 /* UINavigationBar+Style.swift in Sources */,

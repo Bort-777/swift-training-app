@@ -9,8 +9,7 @@
 import Foundation
 
 enum EditDepartmentCellType {
-    case arrowType
-    case switchType
+    case arrowType, switchType, editType
 }
 
 enum EditDepartment : Int {
@@ -40,7 +39,7 @@ class EditDepartmentItem {
         case .name:
             title = "Name"
             subtitle = department.name
-            type = .arrowType
+            type = .editType
         case .active:
             title = "Active"
             type = .switchType
