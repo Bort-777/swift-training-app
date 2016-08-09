@@ -56,8 +56,8 @@ class EditDepartmentItem {
             for taxe in department.taxes {
                 // TODO -
                 subtitle = subtitle + taxe.name + " "
-                menuSegue = Constant.sTaxes
             }
+            menuSegue = Constant.sTaxes
             type = .arrowType
         case .items:
             title = "Applied Item"

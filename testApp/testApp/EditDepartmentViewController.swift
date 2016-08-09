@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MagicalRecord
 
 class EditDepartmentViewController: BaseController {
     
@@ -18,7 +19,7 @@ class EditDepartmentViewController: BaseController {
     }
     
     @IBAction func saveAction(sender: AnyObject) {
-        
+        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

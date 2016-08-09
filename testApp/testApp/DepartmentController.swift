@@ -26,7 +26,7 @@ class DepartmentController: BaseController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        tableView.reloadData()
+        refreshData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -48,14 +48,14 @@ class DepartmentController: BaseController {
                 for dataJSON in result {
                     Department.MR_importFromObject(dataJSON.dictionaryObject!)
                 }
-                self.reloadDepartments()
+                self.refreshData()
             },
             failed: {error in
                 self.presentErrorAlertController(error)
         })
     }
     
-    func reloadDepartments() {
+    func refreshData() {
         if let departmentNew = Department.MR_findAllSortedBy("name", ascending: true) as? [Department] {
             department.appendContentsOf(departmentNew)
         }
@@ -88,6 +88,6 @@ extension DepartmentController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-            self.performSegueWithIdentifier(Constant.sEditDepartment, sender: self)
+        self.performSegueWithIdentifier(Constant.sEditDepartment, sender: self)
     }
 }
