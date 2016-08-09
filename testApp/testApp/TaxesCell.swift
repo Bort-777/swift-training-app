@@ -12,7 +12,7 @@ class TaxesCell: BaseTableCell {
 
     static let cellIdentifier = String(TaxesCell)
     
-    // MARK: - Outlets
+    // MARK: - @IBOutlet
     @IBOutlet weak var title: UILabel!
     
     // MARK: - Data

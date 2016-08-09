@@ -12,6 +12,7 @@ class StoreSetupCell: BaseTableCell {
     
     static let cellIdentifier = String(StoreSetupCell)
     
+    // MARK: - @IBOutlet
     @IBOutlet private weak var iconView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
@@ -22,6 +23,8 @@ class StoreSetupCell: BaseTableCell {
     @IBOutlet weak var topTitleConstraint: NSLayoutConstraint!
     @IBOutlet weak var subtiteCostraint: NSLayoutConstraint!
     @IBOutlet weak var titleConstraint: NSLayoutConstraint!
+    
+    // MARK: - Data
     var item: StoreSetupItem? {
         didSet {
             mode = item!.type

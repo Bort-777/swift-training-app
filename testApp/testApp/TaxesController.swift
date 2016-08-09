@@ -17,6 +17,7 @@ class TaxesController: BaseController {
     
     var taxes: [Taxe] = []
     
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAllTaxes()
@@ -37,6 +38,7 @@ class TaxesController: BaseController {
         }
     }
     
+    // MARK: - Data Request
     func fetchAllTaxes() {
         
         RequestManager.requestTaxes(

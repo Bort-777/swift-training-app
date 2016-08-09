@@ -12,14 +12,11 @@ class MenuCell: UITableViewCell {
     
     static let cellIdentifier = String(MenuCell)
     
+    // MARK: - @IBOutlet
     @IBOutlet private weak var iconView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        backgroundColor = .clearColor()
-    }
-
+    // MARK: - Data
     var item: MenuItem? {
         didSet {
             nameLabel.text = item!.menuTitle

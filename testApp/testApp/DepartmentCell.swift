@@ -12,7 +12,7 @@ class DepartmentCell: BaseTableCell {
     
     static let cellIdentifier = String(DepartmentCell)
 
-    // MARK: - Outlets
+    // MARK: - @IBOutlet
     @IBOutlet weak var title: UILabel!
     
     // MARK: - Data

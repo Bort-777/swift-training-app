@@ -10,11 +10,13 @@ import UIKit
 
 class BaseController: UIViewController {
 
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationBackground()
     }
     
+    // MARK: - Default Actions
     private func configurationBackground() {
         let backgroundView = UIImageView(frame: self.view.frame)
         backgroundView.contentMode = .ScaleAspectFill
@@ -22,6 +24,7 @@ class BaseController: UIViewController {
         self.view.insertSubview(backgroundView, atIndex: 0)
     }
     
+    // MARK: - Keyboard Actions
     func keyboardOn() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)

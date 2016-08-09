@@ -14,13 +14,22 @@ class EditDepartmentCell: BaseTableCell {
     
     static let cellIdentifier = String(EditDepartmentCell)
     
-    // MARK: - Outlets
+    // MARK: - @IBOutlet
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     
     @IBOutlet private weak var editView: UITextField!
     @IBOutlet private weak var swichView: UISwitch!
     @IBOutlet private weak var arrowView: UIImageView!
+    
+    // MARK: - @IBAction
+    @IBAction func didChangeTextField() {
+        delegate?.didChangeTextField(self, textData: editView.text!)
+    }
+    
+    @IBAction func didChangeSwitchState() {
+        delegate?.didChangeSwitchState(self, isOn: swichView.on)
+    }
     
     // MARK: - Delegate
     weak var delegate: EditDepartmentCellDelegate?
@@ -52,14 +61,6 @@ class EditDepartmentCell: BaseTableCell {
                 subtitleLabel.hidden = true
             }
         }
-    }
-    
-    @IBAction func didChangeTextField() {
-        delegate?.didChangeTextField(self, textData: editView.text!)
-    }
-    
-    @IBAction func didChangeSwitchState() {
-        delegate?.didChangeSwitchState(self, isOn: swichView.on)
     }
 }
 

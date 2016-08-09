@@ -18,6 +18,8 @@ class DepartmentController: BaseController {
     var department: [Department] = []
     let heightRow = CGFloat(56)
 
+    
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAllDepartments()
@@ -37,6 +39,8 @@ class DepartmentController: BaseController {
         }
     }
     
+    
+    // MARK: - Data Request
     func fetchAllDepartments() {
         
         RequestManager.requestDepartaments(

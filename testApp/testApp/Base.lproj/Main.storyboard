@@ -179,6 +179,7 @@
                                                 <constraint firstItem="PfN-NZ-EkZ" firstAttribute="bottom" secondItem="Q9x-Pv-IAr" secondAttribute="bottom" id="u5s-oE-vva"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="iconView" destination="PfN-NZ-EkZ" id="lbd-Is-C6J"/>
                                             <outlet property="nameLabel" destination="Q9x-Pv-IAr" id="9id-Cv-Ovh"/>

@@ -12,8 +12,10 @@ class EditTaxInDepCell: BaseTableCell {
 
     static let cellIdentifier = String(EditTaxInDepCell)
     
+    // MARK: - @IBOutlet
     @IBOutlet private weak var titleLabel: UILabel!
     
+    // MARK: - Data
     var data: Taxe? {
         didSet {
             titleLabel.text = data?.name
